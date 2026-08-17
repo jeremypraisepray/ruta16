@@ -1,0 +1,695 @@
+[
+  {
+    "num": "01",
+    "name": "APPETIZERS",
+    "tag": "PA' EMPEZAR",
+    "accent": "#e2493b",
+    "desc": "Platos pal centro de la mesa. Pide dos y pasa la salsa.",
+    "groups": [
+      {
+        "title": "TRANQUI",
+        "note": "take it easy",
+        "accent": "#e2493b",
+        "items": [
+          {
+            "name": "Ostiones en Concha",
+            "price": "6 pc $13 · 12 pc $21",
+            "desc": "Fresh oysters in shell."
+          },
+          {
+            "name": "Ostiones Acevichados",
+            "price": "6 pc $17 · 12 pc $26",
+            "desc": "Fresh oysters with fish ceviche, culichi sauce, pico."
+          },
+          {
+            "name": "Ostiones R16",
+            "price": "6 pc $16 · 12 pc $28",
+            "desc": "Grilled oysters — bacon, chorizo, mozzarella, jalapeño, camarada sauce, garlic bread, roasted lemon."
+          }
+        ]
+      },
+      {
+        "title": "RAPIDÍN",
+        "note": "in a hurry",
+        "accent": "#2f8fd5",
+        "items": [
+          {
+            "name": "Camarón Cajun R16",
+            "price": "1 lb $30 · ½ lb $17",
+            "desc": "Boiled shrimp, R16 seasoning, red potato, corn, sausage, crab, garlic sauce."
+          },
+          {
+            "name": "Camarón Cajun Louisiana",
+            "price": "1 lb $24 · ½ lb $14",
+            "desc": "Classic Louisiana-style boil."
+          },
+          {
+            "name": "Crabfingers",
+            "price": "$MP",
+            "desc": "Garlic butter, molcajeteada, devil sauce or grilled."
+          }
+        ]
+      },
+      {
+        "title": "CÓCTELES",
+        "note": "seafood cocktails",
+        "accent": "#e2493b",
+        "items": [
+          {
+            "name": "Levanta Muertos",
+            "price": "$23",
+            "desc": "Shrimp, octopus, oysters, fish ceviche in R16 cocktail sauce, avocado, pico."
+          },
+          {
+            "name": "Cóctel Mixto",
+            "price": "$20",
+            "desc": "Shrimp & octopus."
+          },
+          {
+            "name": "Cóctel de Camarón",
+            "price": "$15",
+            "desc": ""
+          }
+        ]
+      },
+      {
+        "title": "PA' LOS COMPAS",
+        "note": "for the homies",
+        "accent": "#2f8fd5",
+        "items": [
+          {
+            "name": "Buddy Shrimp",
+            "price": "$17",
+            "desc": "House favorite — 3 stuffed, 3 camarada, 3 breaded shrimp, curtido, fries, camarada sauce."
+          },
+          {
+            "name": "Trash Can Nachos",
+            "price": "$MP",
+            "desc": "Charro beans, chile con queso, pico, jalapeño, guac, choice of meat."
+          },
+          {
+            "name": "Camarones Camarada",
+            "price": "6 pc $9 · 12 pc $15",
+            "desc": "Tempura shrimp."
+          },
+          {
+            "name": "Chicken Wings",
+            "price": "6 pc $12 · 12 pc $22",
+            "desc": "Fried."
+          },
+          {
+            "name": "Chicharrón Mixto",
+            "price": "$24",
+            "desc": "Tilapia & octopus."
+          },
+          {
+            "name": "Chicharrón de Pulpo",
+            "price": "$23",
+            "desc": ""
+          },
+          {
+            "name": "Chicharrón de Tilapia",
+            "price": "$18",
+            "desc": ""
+          },
+          {
+            "name": "Seafood Crab Balls",
+            "price": "$MP",
+            "desc": "Camarada sauce."
+          },
+          {
+            "name": "Empanadas Marinas",
+            "price": "$9",
+            "desc": "Shrimp, crab, veggies."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "num": "02",
+    "name": "ZONA CULICHI",
+    "tag": "SINALOA STYLE",
+    "accent": "#2f8fd5",
+    "desc": "Crudo, frío y con limón — como se come en Culiacán.",
+    "groups": [
+      {
+        "title": "TOP SELLERS",
+        "note": "los que vuelan de la cocina · add chiltepín +$2",
+        "accent": "#e2493b",
+        "items": [
+          {
+            "name": "Torre 16",
+            "price": "$29",
+            "desc": "Mixed ceviche, scallops, callo de pescado, boiled shrimp, 6 aguachiles, avocado, cucumber, red onions, dipped in culichi sauce."
+          },
+          {
+            "name": "Copa 16",
+            "price": "$25",
+            "desc": "Glass stuffed with fish ceviche, 12 aguachiles in culichi sauce, 3 jumbo shrimp + scallops on top."
+          },
+          {
+            "name": "La Chaparra",
+            "price": "$29",
+            "desc": "Molcajete bowl — seafood tower, mixed ceviche, scallops, boiled + tanned shrimp, green mussels, avocado, culichi sauce."
+          },
+          {
+            "name": "7 Mares",
+            "price": "$25",
+            "desc": "Molcajete — seafood mix, octopus, scallops, callo, boiled + tanned shrimp, avocado, onions."
+          },
+          {
+            "name": "Piña La Malecona",
+            "price": "$22",
+            "desc": "Pineapple stuffed with mixed ceviche — fish, shrimp, octopus, red onion, diced pineapple, sauce of choice."
+          }
+        ]
+      },
+      {
+        "title": "CEVICHES Y TOSTADAS",
+        "note": "tostada $8 · ceviche $18 · add chiltepín +$2",
+        "accent": "#2f8fd5",
+        "items": [
+          {
+            "name": "Ceviche Tropical",
+            "price": "$18",
+            "desc": ""
+          },
+          {
+            "name": "Ceviche de Pulpo",
+            "price": "$18",
+            "desc": ""
+          },
+          {
+            "name": "Ceviche de Pescado",
+            "price": "$18",
+            "desc": ""
+          }
+        ]
+      },
+      {
+        "title": "AGUACHILES",
+        "note": "tanned shrimp, culichi sauce, avocado, cucumber, red onion",
+        "accent": "#e2493b",
+        "items": [
+          {
+            "name": "Aguachile Negro",
+            "price": "6 pc $13 · 12 pc $17 · 16 pc $21",
+            "desc": ""
+          },
+          {
+            "name": "Aguachile Rojo",
+            "price": "6 pc $13 · 12 pc $17 · 16 pc $21",
+            "desc": ""
+          },
+          {
+            "name": "Aguachile Verde",
+            "price": "6 pc $13 · 12 pc $17 · 16 pc $21",
+            "desc": ""
+          }
+        ]
+      },
+      {
+        "title": "PARA COMPARTIR",
+        "note": "tray to share",
+        "accent": "#2f8fd5",
+        "items": [
+          {
+            "name": "Gran Culichi",
+            "price": "$MP",
+            "desc": "5 oysters, 5 clams with fish ceviche & pico, 6 aguachiles, 12 shrimp, 6 callo de hacha, 5 balazos — choice of culichi sauce."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "num": "03",
+    "name": "RUTA CALIENTE",
+    "tag": "CALDOS · ARROZ",
+    "accent": "#e2493b",
+    "desc": "Caldito que levanta muertos, arroz recién salteado.",
+    "groups": [
+      {
+        "title": "CALDOS",
+        "note": "add devil sauce +$2",
+        "accent": "#e2493b",
+        "items": [
+          {
+            "name": "Caldo de Mariscos",
+            "price": "$16",
+            "desc": "Crab, clams, squid, veggies — rice, garlic bread."
+          },
+          {
+            "name": "Caldo de Camarón",
+            "price": "$14",
+            "desc": ""
+          },
+          {
+            "name": "Caldo de Pescado",
+            "price": "$13",
+            "desc": ""
+          },
+          {
+            "name": "Lobster & Shrimp Cream Soup",
+            "price": "$10",
+            "desc": "Served in a bread ball."
+          }
+        ]
+      },
+      {
+        "title": "ARROZ",
+        "note": "fried rice",
+        "accent": "#2f8fd5",
+        "items": [
+          {
+            "name": "Arroz Mixto",
+            "price": "$13",
+            "desc": "Shrimp & chicken."
+          },
+          {
+            "name": "Arroz con Camarón",
+            "price": "$12",
+            "desc": ""
+          },
+          {
+            "name": "Arroz con Pollo",
+            "price": "$12",
+            "desc": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "num": "04",
+    "name": "MARISCOS",
+    "tag": "DEL ASADOR",
+    "accent": "#2f8fd5",
+    "desc": "Del asador de fuego abierto — los fuertes de la casa.",
+    "groups": [
+      {
+        "title": "ZARANDEADOS",
+        "note": "open fire, secret sauce, fried rice, house salad, roasted jalapeño",
+        "accent": "#e2493b",
+        "items": [
+          {
+            "name": "Huachinango Zarandeado",
+            "price": "$MP",
+            "desc": ""
+          },
+          {
+            "name": "Camarones Zarandeados",
+            "price": "$20",
+            "desc": ""
+          },
+          {
+            "name": "Pulpo Zarandeado",
+            "price": "$MP",
+            "desc": ""
+          }
+        ]
+      },
+      {
+        "title": "SALMONES",
+        "note": "",
+        "accent": "#2f8fd5",
+        "items": [
+          {
+            "name": "Salmón R16",
+            "price": "$26",
+            "desc": "Stuffed with cream, spinach & cheese — house rice, vegetables."
+          },
+          {
+            "name": "Salmón Mexicano",
+            "price": "$25",
+            "desc": "Avocado, pico, lime wine sauce."
+          }
+        ]
+      },
+      {
+        "title": "AL GUSTO",
+        "note": "fried rice, house salad, sautéed potatoes · roasted garlic, devil, molcajeteada or grilled",
+        "accent": "#e2493b",
+        "items": [
+          {
+            "name": "Huachinango",
+            "price": "$33",
+            "desc": ""
+          },
+          {
+            "name": "Mojarra",
+            "price": "$18",
+            "desc": ""
+          },
+          {
+            "name": "Bass Fish",
+            "price": "$18",
+            "desc": ""
+          },
+          {
+            "name": "Catfish",
+            "price": "$18",
+            "desc": ""
+          },
+          {
+            "name": "Camarones",
+            "price": "$16",
+            "desc": ""
+          }
+        ]
+      },
+      {
+        "title": "EMPANIZADOS",
+        "note": "house fried rice, house salad",
+        "accent": "#2f8fd5",
+        "items": [
+          {
+            "name": "Camarones Empanizados",
+            "price": "$16",
+            "desc": ""
+          },
+          {
+            "name": "Filete de Pescado",
+            "price": "$16",
+            "desc": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "num": "05",
+    "name": "Y MÁS",
+    "tag": "TACOS · SANDWICHES · PASTAS",
+    "accent": "#e2493b",
+    "desc": "Porque somos mariscos… y más.",
+    "groups": [
+      {
+        "title": "TACOS",
+        "note": "with house salad",
+        "accent": "#e2493b",
+        "items": [
+          {
+            "name": "Tacos Gobernador",
+            "price": "$16",
+            "desc": ""
+          },
+          {
+            "name": "Quesabirria",
+            "price": "$18",
+            "desc": "Con consomé."
+          },
+          {
+            "name": "Rib Eye Tacos",
+            "price": "$18",
+            "desc": ""
+          },
+          {
+            "name": "Bang Bang Fried Shrimp Tacos",
+            "price": "$16",
+            "desc": ""
+          },
+          {
+            "name": "Tacos Campechanos",
+            "price": "$15",
+            "desc": ""
+          },
+          {
+            "name": "Fish Tacos",
+            "price": "$13",
+            "desc": ""
+          }
+        ]
+      },
+      {
+        "title": "SANDWICHES",
+        "note": "with fries or onion rings",
+        "accent": "#2f8fd5",
+        "items": [
+          {
+            "name": "Hamburguesa Pirata",
+            "price": "$18",
+            "desc": "6 oz beef, 3 mariposa shrimp, american cheese."
+          },
+          {
+            "name": "Hamburguesa Chilanga",
+            "price": "$22",
+            "desc": "Beef, chicken, chorizo, grilled cactus, camarada sauce."
+          },
+          {
+            "name": "Po-Boys",
+            "price": "$15",
+            "desc": "French baguette, chile con queso — shrimp, oyster or fish."
+          }
+        ]
+      },
+      {
+        "title": "PASTAS",
+        "note": "add chipotle +$2",
+        "accent": "#e2493b",
+        "items": [
+          {
+            "name": "Pasta Mardi Gras",
+            "price": "$25",
+            "desc": "Fettuccine, chicken, shrimp, sausage, tomato cream."
+          },
+          {
+            "name": "Pasta Mariscos",
+            "price": "chicken $18 · shrimp $19 · salmon $25",
+            "desc": ""
+          },
+          {
+            "name": "Pasta Alfredo",
+            "price": "chicken $14 · shrimp $17 · salmon $22",
+            "desc": ""
+          }
+        ]
+      },
+      {
+        "title": "DEL GRILL",
+        "note": "",
+        "accent": "#2f8fd5",
+        "items": [
+          {
+            "name": "Brochetas Mixtas",
+            "price": "2 pc $23",
+            "desc": "Shrimp, chicken & beef skewers."
+          },
+          {
+            "name": "Caesar Salad",
+            "price": "$17",
+            "desc": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "num": "06",
+    "name": "MORRITOS & DESSERT",
+    "tag": "KIDS · DULCE · DRINKS",
+    "accent": "#2f8fd5",
+    "desc": "Pa' los morritos y el antojo dulce.",
+    "groups": [
+      {
+        "title": "MORRITOS",
+        "note": "kids",
+        "accent": "#2f8fd5",
+        "items": [
+          {
+            "name": "Dedos de Queso",
+            "price": "$9",
+            "desc": ""
+          },
+          {
+            "name": "Pasta Alfredo",
+            "price": "$7",
+            "desc": ""
+          },
+          {
+            "name": "Cheeseburger",
+            "price": "$7",
+            "desc": ""
+          },
+          {
+            "name": "Filete Empanizado",
+            "price": "$7",
+            "desc": ""
+          },
+          {
+            "name": "Chicken Tenders / Nuggets",
+            "price": "$7",
+            "desc": "With fries."
+          }
+        ]
+      },
+      {
+        "title": "DESSERT",
+        "note": "",
+        "accent": "#e2493b",
+        "items": [
+          {
+            "name": "El Guapo",
+            "price": "$14",
+            "desc": ""
+          },
+          {
+            "name": "Chocolate Guapo",
+            "price": "$14",
+            "desc": ""
+          }
+        ]
+      },
+      {
+        "title": "BEBIDAS",
+        "note": "",
+        "accent": "#2f8fd5",
+        "items": [
+          {
+            "name": "Aguas Frescas",
+            "price": "sm $3.50 · lg $4.50",
+            "desc": "Limonada, horchata, jamaica, piña pa' la niña, jugo de naranja — no refill."
+          },
+          {
+            "name": "Mexican Coke",
+            "price": "$4",
+            "desc": ""
+          },
+          {
+            "name": "Jarritos",
+            "price": "$3",
+            "desc": ""
+          },
+          {
+            "name": "Soft Drinks",
+            "price": "$3",
+            "desc": ""
+          },
+          {
+            "name": "Red Bull",
+            "price": "$4",
+            "desc": ""
+          },
+          {
+            "name": "Agua Embotellada",
+            "price": "$2",
+            "desc": ""
+          },
+          {
+            "name": "Daiquiris",
+            "price": "$MP",
+            "desc": "Fresa · mango · guava · sandía."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "num": "07",
+    "name": "CHEVES",
+    "tag": "ÚLTIMA PARADA",
+    "accent": "#e2493b",
+    "desc": "Última parada: hielo, limón y sal.",
+    "groups": [
+      {
+        "title": "DE AQUÍ",
+        "note": "domestic $4.50",
+        "accent": "#e2493b",
+        "items": [
+          {
+            "name": "Bud Light · Budweiser · Michelob Ultra",
+            "price": "$4.50",
+            "desc": ""
+          },
+          {
+            "name": "Coors Light · Miller Lite",
+            "price": "$4.50",
+            "desc": ""
+          },
+          {
+            "name": "Heineken · Heineken 0.0 · Topochico Seltzer",
+            "price": "$4.50",
+            "desc": ""
+          }
+        ]
+      },
+      {
+        "title": "DE ALLÁ",
+        "note": "imported $5",
+        "accent": "#2f8fd5",
+        "items": [
+          {
+            "name": "Corona Extra · Familiar · Premier",
+            "price": "$5",
+            "desc": ""
+          },
+          {
+            "name": "Modelo Especial · Negra Modelo · Pacífico",
+            "price": "$5",
+            "desc": ""
+          },
+          {
+            "name": "Tecate Light · Roja · Victoria · Indio · Sol",
+            "price": "$5",
+            "desc": ""
+          },
+          {
+            "name": "Dos Equis · Bohemia · Stella · Estrella Jalisco",
+            "price": "$5",
+            "desc": ""
+          }
+        ]
+      },
+      {
+        "title": "BUCKETS",
+        "note": "6 beers · pide tu barco cervecero",
+        "accent": "#e2493b",
+        "items": [
+          {
+            "name": "Bucket Domestic",
+            "price": "$28",
+            "desc": ""
+          },
+          {
+            "name": "Bucket Imported",
+            "price": "$30",
+            "desc": ""
+          },
+          {
+            "name": "Bucket Mix",
+            "price": "$30",
+            "desc": ""
+          }
+        ]
+      },
+      {
+        "title": "EXTRAS",
+        "note": "",
+        "accent": "#2f8fd5",
+        "items": [
+          {
+            "name": "Michelada Regular",
+            "price": "+$1",
+            "desc": ""
+          },
+          {
+            "name": "Michelada Preparada",
+            "price": "+$3",
+            "desc": ""
+          },
+          {
+            "name": "Chelada",
+            "price": "+$1",
+            "desc": ""
+          },
+          {
+            "name": "Michelada Large",
+            "price": "$7",
+            "desc": ""
+          }
+        ]
+      }
+    ]
+  }
+]

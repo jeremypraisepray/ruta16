@@ -1,0 +1,97 @@
+# Mariscos Ruta 16 y Más — "Parada Nocturna"
+
+Static marketing site for Mariscos Ruta 16 y Más (Sinaloa-style seafood — 2726 Spencer Hwy,
+Pasadena, TX 77504), built from the `Ruta16_design_project` handoff bundle.
+
+**Stack:** Next.js 15 (App Router) + React 19, no backend, no data fetching.
+`next.config.mjs` sets `output: 'export'`, so `npm run build` emits a fully static `out/`
+directory that Vercel (or any static host) serves as-is.
+
+## Run
+
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # static export → out/
+```
+
+## Pages
+
+| Route        | Source                  | Notes |
+| ------------ | ----------------------- | ----- |
+| `/`          | `app/page.js`           | Video hero, parada rail, top sellers, specials, patio, reviews |
+| `/menu`      | `app/menu/page.js`      | Interactive — client-side parada filter |
+| `/nosotros`  | `app/nosotros/page.js`  | Video hero, story, pillars, postales grid |
+| `/visitanos` | `app/visitanos/page.js` | Address / contact / horario, specials, service areas |
+
+## Menu data
+
+`data/menu.json` is the content source of truth: 7 paradas, 25 groups, 91 items with prices and
+descriptions. It was extracted programmatically from the logic class of `Ruta16 Menu.dc.html` so
+nothing was lost in transcription. `components/MenuBoard.js` renders it and owns the single piece
+of state on the site — `active: 'all' | '01'…'07'`. Changing the filter calls
+`window.scrollTo({ top: 0 })` (never `scrollIntoView`), and the "ON THE ROAD AHEAD" button advances
+the filter to the next parada.
+
+Shared facts (hours, socials, service areas, specials, order/maps URLs) live in `data/site.js`.
+
+## Design system
+
+Tokens are CSS custom properties at the top of `app/globals.css`:
+
+- Navy `#141722` · deep panel `#0e1119` · nav `rgba(20,23,34,.93)` + `backdrop-filter: blur(8px)`
+- Red `#e2493b` · blue `#2f6fb5` · light blue `#2f8fd5` · hairline `rgba(255,255,255,.08)`
+- Barlow Condensed 500–800 (headings, nav, prices, labels) and Barlow 400–700 (body), loaded with
+  `next/font/google` so the woff2 files are self-hosted in the build — no runtime request to Google.
+
+Signature motifs are implemented as reusable classes: `.barSplit` (6px red/blue split bar),
+`.ring` (dashed-ring circles, alternating red/blue), `.dotLeader` (dotted leader lines),
+`.hero__ghost` / `.parada__ghost` (giant ghost numerals), `.hero__dots` (dot-grid overlay),
+`.hero__rail` (vertical rail text).
+
+## Assets
+
+All assets are self-hosted under `public/`.
+
+- **Photos** — the ten `.webp` files from the bundle, copied and renamed by subject
+  (`torre-mariscos`, `molcajete-aguachile`, `ostiones-r16`, …).
+- **Videos** — the two phone-quality source videos re-encoded for web with ffmpeg:
+  scaled to 720×1280, audio stripped (they play muted), H.264 CRF 28, `+faststart`.
+  `hero-home.mp4` 8.0 MB → **2.0 MB**; `hero-nosotros.mp4` 5.4 MB → **1.3 MB**.
+  Each ships a `-poster.webp` still, and the `<video>` elements are
+  `autoplay muted loop playsinline preload="metadata"` with the poster as the first paint.
+  (VP9/WebM variants were encoded and discarded — both came out larger than the H.264 files.)
+- **Logo** — see below.
+
+## Known deviations from the handoff
+
+Two things differ from the bundle, both deliberate:
+
+1. **The brand logo is a placeholder.** The handoff hotlinks
+   `https://ruta16.com/pluto-images/brand-logos/3b541599-75f4-485a-85d0-23b15a895e42.png`, and that
+   host is blocked by this build environment's egress policy (403 at the proxy), so the PNG could not
+   be downloaded and self-hosted. `components/BrandLogo.js` is a vector recreation built to the logo
+   description in the bundle's `assets/notes.md` — red "RUTA" shield top, blue "16" bottom,
+   "MARISCOS" arc above, "Y MÁS..." below. **Swap in the official artwork before launch**: replace
+   the SVG in that component (it is the only place the mark is used) and
+   `public/brand/ruta16-mark.svg`, which is the favicon.
+2. **Top-seller circles are 3px shorter per row than the design reference.** In the reference the
+   photos are inline images, so each ring picks up ~3px of line-box descender space below the photo.
+   This build sets `img { display: block }`, which removes it. Everything else on Home matches the
+   reference to the pixel; the cumulative page-height difference is 6px across the two rows.
+
+Every other measured box — position, size, font size, weight, letter-spacing and color — matches the
+rendered design references exactly at 1440px. Menú, Nosotros and Visítanos match to a document height
+of 0px difference.
+
+## Responsive
+
+Below ~1100px is not designed; `app/globals.css` implements the stacking rules from the handoff:
+nav collapses to a hamburger drawer, hero headline drops to 56px (44px under 640px), the parada rail
+scrolls horizontally, top sellers go 2-col (1-col under 640px), specials stack, 2-col layouts stack,
+menu groups go 1-col, postales go 2-col. No horizontal overflow at 320–1440px.
+
+## External links
+
+All open in a new tab with `rel="noopener noreferrer"`: Order Online → Toast, address → Google Maps,
+Instagram `r16_pasadena`, Facebook, TikTok `@mariscosr16`. Phone numbers are `tel:` links.
