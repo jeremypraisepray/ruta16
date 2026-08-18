@@ -61,24 +61,24 @@ All assets are self-hosted under `public/`.
   Each ships a `-poster.webp` still, and the `<video>` elements are
   `autoplay muted loop playsinline preload="metadata"` with the poster as the first paint.
   (VP9/WebM variants were encoded and discarded — both came out larger than the H.264 files.)
-- **Logo** — see below.
+- **Logo** — `public/brand/ruta16-logo.png`, the official artwork extracted from the client's
+  `LOGO_RUTA_16` PDF (a 406×587 raster with an alpha mask, lifted off the PDF's white page so it sits
+  transparent on the navy nav). `public/brand/ruta16-icon.png` is the same mark on a navy square,
+  used as the favicon and Apple touch icon. `components/BrandLogo.js` is the only place it is used.
 
 ## Known deviations from the handoff
 
-Two things differ from the bundle, both deliberate:
+One thing differs from the bundle, deliberately:
 
-1. **The brand logo is a placeholder.** The handoff hotlinks
-   `https://ruta16.com/pluto-images/brand-logos/3b541599-75f4-485a-85d0-23b15a895e42.png`, and that
-   host is blocked by this build environment's egress policy (403 at the proxy), so the PNG could not
-   be downloaded and self-hosted. `components/BrandLogo.js` is a vector recreation built to the logo
-   description in the bundle's `assets/notes.md` — red "RUTA" shield top, blue "16" bottom,
-   "MARISCOS" arc above, "Y MÁS..." below. **Swap in the official artwork before launch**: replace
-   the SVG in that component (it is the only place the mark is used) and
-   `public/brand/ruta16-mark.svg`, which is the favicon.
-2. **Top-seller circles are 3px shorter per row than the design reference.** In the reference the
+1. **Top-seller circles are 3px shorter per row than the design reference.** In the reference the
    photos are inline images, so each ring picks up ~3px of line-box descender space below the photo.
    This build sets `img { display: block }`, which removes it. Everything else on Home matches the
    reference to the pixel; the cumulative page-height difference is 6px across the two rows.
+
+The handoff's logo URL (`ruta16.com/pluto-images/brand-logos/…`) was unreachable from this build
+environment, so the mark comes from the client-supplied `LOGO_RUTA_16` PDF instead. It renders at the
+58px height the design specifies; since the artwork is portrait (405×587), that works out to 40px
+wide in the nav.
 
 Every other measured box — position, size, font size, weight, letter-spacing and color — matches the
 rendered design references exactly at 1440px. Menú, Nosotros and Visítanos match to a document height

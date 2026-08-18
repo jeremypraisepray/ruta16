@@ -145,7 +145,7 @@ button {
 }
 .nav__logo { display: block; }
 .nav__logo:hover { color: inherit; }
-.nav__logo svg { height: 58px; width: auto; display: block; }
+.nav__logo img { height: 58px; width: auto; display: block; }
 .nav__links {
   display: flex;
   gap: 36px;
@@ -981,7 +981,7 @@ button {
   :root { --gutter: 40px; --nav-h: 74px; }
 
   .nav { padding: 12px 24px; flex-wrap: wrap; }
-  .nav__logo svg { height: 50px; }
+  .nav__logo img { height: 50px; }
   .nav__links,
   .nav__order { display: none; }
   .nav__burger { display: flex; }

@@ -32,7 +32,7 @@ export const metadata = {
       'Aguachiles, torres y zarandeados del asador — servidos como en Culiacán, aquí en Pasadena, TX.',
     images: ['/media/torre-mariscos.webp'],
   },
-  icons: { icon: '/brand/ruta16-mark.svg' },
+  icons: { icon: '/brand/ruta16-icon.png', apple: '/brand/ruta16-icon.png' },
 };
 
 export const viewport = {
