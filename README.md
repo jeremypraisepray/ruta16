@@ -1,7 +1,8 @@
 # Mariscos Ruta 16 y Más — "Parada Nocturna"
 
 Static marketing site for Mariscos Ruta 16 y Más (Sinaloa-style seafood — 2726 Spencer Hwy,
-Pasadena, TX 77504), built from the `Ruta16_design_project` handoff bundle.
+Pasadena, TX 77504). Built from the design handoff bundle; the current spec lives in
+`design/handoff-2026-08/` (menu v2 — 8 paradas, dish and drink cut-outs).
 
 **Stack:** Next.js 15 (App Router) + React 19, no backend, no data fetching.
 `next.config.mjs` sets `output: 'export'`, so `npm run build` emits a fully static `out/`
@@ -19,17 +20,18 @@ npm run build    # static export → out/
 
 | Route        | Source                  | Notes |
 | ------------ | ----------------------- | ----- |
-| `/`          | `app/page.js`           | Video hero, parada rail, top sellers, specials, patio, reviews |
-| `/menu`      | `app/menu/page.js`      | Interactive — client-side parada filter |
-| `/nosotros`  | `app/nosotros/page.js`  | Video hero, story, pillars, postales grid |
-| `/visitanos` | `app/visitanos/page.js` | Address / contact / horario, specials, service areas |
+| `/`          | `app/page.js`           | Video hero, parada rail, top sellers, *Platos de la Ruta*, *La Barra* marquee, specials, patio, reviews |
+| `/menu`      | `app/menu/page.js`      | Interactive — client-side parada filter, per-parada art and *Plato destacado* |
+| `/nosotros`  | `app/nosotros/page.js`  | Video hero, story, pillars, *Lo que sale del pase*, postales grid |
+| `/visitanos` | `app/visitanos/page.js` | Address / contact / horario, specials, *Pide pa' llevar*, service areas |
 
 ## Menu data
 
-`data/menu.json` is the content source of truth: 7 paradas, 25 groups, 91 items with prices and
-descriptions. It was extracted programmatically from the logic class of `Ruta16 Menu.dc.html` so
-nothing was lost in transcription. `components/MenuBoard.js` renders it and owns the single piece
-of state on the site — `active: 'all' | '01'…'07'`. Changing the filter calls
+`data/menu.json` is the content source of truth: 8 paradas, 29 groups, 112 items with prices and
+descriptions, matching printed menu v2 (Topo Chico is $4 per the owner, not the $3 the PDF prints).
+It was extracted programmatically from the logic class of `Ruta16 Menu.dc.html` so nothing was lost
+in transcription. `components/MenuBoard.js` renders it and owns the single piece of state on the
+site — `active: 'all' | '01'…'08'`. Changing the filter calls
 `window.scrollTo({ top: 0 })` (never `scrollIntoView`), and the "ON THE ROAD AHEAD" button advances
 the filter to the next parada.
 
@@ -61,6 +63,11 @@ All assets are self-hosted under `public/`.
   Each ships a `-poster.webp` still, and the `<video>` elements are
   `autoplay muted loop playsinline preload="metadata"` with the poster as the first paint.
   (VP9/WebM variants were encoded and discarded — both came out larger than the H.264 files.)
+- **Dish & drink cut-outs** — the 26 transparent PNGs from the `assets-v2` release, resized to the
+  largest box the design renders them in (×2 for retina) and converted to alpha WebP:
+  **49.9 MB → 3.0 MB**. `components/Cutout.js` renders them; `data/cutouts.json` carries each file's
+  intrinsic size so lazy loading reserves the right box, and the component releases whichever axis
+  the CSS does not constrain so the aspect ratio is never squashed.
 - **Logo** — `public/brand/ruta16-logo.png`, the official artwork extracted from the client's
   `LOGO_RUTA_16` PDF (a 406×587 raster with an alpha mask, lifted off the PDF's white page so it sits
   transparent on the navy nav). `public/brand/ruta16-icon.png` is the same mark on a navy square,
@@ -82,7 +89,15 @@ wide in the nav.
 
 Every other measured box — position, size, font size, weight, letter-spacing and color — matches the
 rendered design references exactly at 1440px. Menú, Nosotros and Visítanos match to a document height
-of 0px difference.
+of 0px difference, and every cut-out renders at the reference's size (two portrait drinks differ by
+1px from rounding in the WebP resize).
+
+Three bits of copy in the v2 references still describe the 7-parada menu, and are kept verbatim
+because the handoff calls copy final — worth a decision before launch:
+
+- Home, above *Platos de la Ruta*: eyebrow reads "SIETE PARADAS · UN SOLO VIAJE" (there are now 8).
+- Home, above *La Barra*: eyebrow reads "PARADA 07 · ÚLTIMA PARADA", but Cheves is parada 08.
+- Nosotros, second story paragraph: "siete paradas".
 
 ## Responsive
 

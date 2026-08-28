@@ -1,0 +1,106 @@
+{
+  "dishes/aguachile": [
+    820,
+    615
+  ],
+  "dishes/arroz-mixto": [
+    820,
+    615
+  ],
+  "dishes/caldo-mariscos": [
+    820,
+    615
+  ],
+  "dishes/camarones-diabla": [
+    820,
+    615
+  ],
+  "dishes/coctel-ceviche": [
+    900,
+    675
+  ],
+  "dishes/empanizados": [
+    820,
+    615
+  ],
+  "dishes/mar-y-tierra": [
+    615,
+    820
+  ],
+  "dishes/mar-y-tierra-v": [
+    615,
+    820
+  ],
+  "dishes/mojarra": [
+    615,
+    820
+  ],
+  "dishes/nachos": [
+    820,
+    615
+  ],
+  "dishes/ostiones": [
+    820,
+    615
+  ],
+  "dishes/parrillada-barco": [
+    1300,
+    867
+  ],
+  "dishes/pasta-alfredo": [
+    820,
+    615
+  ],
+  "dishes/poboy": [
+    820,
+    615
+  ],
+  "dishes/salmon": [
+    820,
+    615
+  ],
+  "dishes/tacos": [
+    820,
+    615
+  ],
+  "dishes/tostadas-ceviche": [
+    820,
+    615
+  ],
+  "drinks/blue-lagoon": [
+    656,
+    820
+  ],
+  "drinks/carajillo": [
+    656,
+    820
+  ],
+  "drinks/hurricane-verde": [
+    656,
+    820
+  ],
+  "drinks/margarita-fresa": [
+    656,
+    820
+  ],
+  "drinks/michelada": [
+    656,
+    820
+  ],
+  "drinks/mojito": [
+    656,
+    820
+  ],
+  "drinks/pina-colada": [
+    656,
+    820
+  ],
+  "drinks/ponche": [
+    656,
+    820
+  ],
+  "drinks/semaforo": [
+    656,
+    820
+  ]
+}

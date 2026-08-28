@@ -1,6 +1,7 @@
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import SpecialsStrip from '@/components/SpecialsStrip';
+import Cutout from '@/components/Cutout';
 import {
   ORDER_URL,
   MAPS_URL,
@@ -8,7 +9,32 @@ import {
   PHONE_HREF,
   HOURS,
   SERVICE_AREAS,
+  SPECIALS_VISIT,
+  RED,
+  BLUE,
+  plateGlow,
 } from '@/data/site';
+
+const LLEVAR = [
+  {
+    name: 'CALDO DE MARISCOS',
+    img: '/images/dishes/caldo-mariscos.webp',
+    accent: RED,
+    desc: 'Bien caliente, con arroz y pan de ajo aparte.',
+  },
+  {
+    name: 'ARROZ MIXTO',
+    img: '/images/dishes/arroz-mixto.webp',
+    accent: BLUE,
+    desc: 'Camarón y pollo — el que alcanza para dos.',
+  },
+  {
+    name: 'EMPANIZADOS',
+    img: '/images/dishes/empanizados.webp',
+    accent: RED,
+    desc: 'Filete y camarón, crujientes hasta la casa.',
+  },
+];
 
 export const metadata = {
   title: 'Visítanos',
@@ -21,10 +47,20 @@ export default function VisitanosPage() {
     <>
       <SiteNav />
 
-      <header className="visitHead">
-        <div className="visitHead__eyebrow">ÚLTIMA PARADA · PASADENA, TX</div>
-        <h1 className="visitHead__title">VISÍTANOS</h1>
-      </header>
+      <div className="visitHero">
+        <div className="dotOverlay" />
+        <div className="visitHero__glow" />
+        <Cutout
+          className="visitHero__dish"
+          src="/images/dishes/mar-y-tierra-v.webp"
+          alt="Mar y tierra del asador"
+          priority
+        />
+        <header className="visitHead">
+          <div className="visitHead__eyebrow">ÚLTIMA PARADA · PASADENA, TX</div>
+          <h1 className="visitHead__title">VISÍTANOS</h1>
+        </header>
+      </div>
 
       <section className="visit">
         <div className="visit__media">
@@ -67,9 +103,23 @@ export default function VisitanosPage() {
         </div>
       </section>
 
-      <SpecialsStrip />
+      <SpecialsStrip items={SPECIALS_VISIT} />
 
       <section className="zona">
+        <div className="llevar">
+          {LLEVAR.map((l) => (
+            <article key={l.name} className="llevar__card" style={{ '--accent': l.accent }}>
+              <div className="llevar__plate" style={{ background: plateGlow(l.accent, '50% 52%') }}>
+                <Cutout src={l.img} alt={l.name} box={[210, 170]} />
+              </div>
+              <div className="llevar__body">
+                <div className="llevar__name">{l.name}</div>
+                <div className="llevar__desc">{l.desc}</div>
+              </div>
+            </article>
+          ))}
+        </div>
+        <div className="zona__eyebrow">PIDE PA&apos; LLEVAR · TOAST ONLINE</div>
         <h2 className="zona__title">SERVIMOS TODA LA ZONA</h2>
         <div className="zona__chips">
           {SERVICE_AREAS.map((a) => (

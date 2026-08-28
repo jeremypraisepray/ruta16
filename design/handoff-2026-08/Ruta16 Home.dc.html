@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body { margin:0; background:#141722; font-family:'Barlow',sans-serif; }
+a { color:inherit; text-decoration:none; }
+a:hover { color:#e2493b; }
+@keyframes r16float { 0%,100% { transform:translateY(0) rotate(-3deg); } 50% { transform:translateY(-18px) rotate(-1.5deg); } }
+@keyframes r16drift { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
+</style>
+</helmet>
+<div style="display:flex; height:6px;"><div style="flex:1; background:#e2493b;"></div><div style="flex:1; background:#2f6fb5;"></div></div>
+<div style="position:sticky; top:0; z-index:40; display:flex; align-items:center; justify-content:space-between; padding:12px 48px; border-bottom:1px solid rgba(255,255,255,.08); background:rgba(20,23,34,.93); backdrop-filter:blur(8px);">
+  <a href="Ruta16 Home.dc.html"><img src="https://ruta16.com/pluto-images/brand-logos/3b541599-75f4-485a-85d0-23b15a895e42.png" alt="Ruta 16" style="height:58px; display:block;"></a>
+  <div style="display:flex; gap:36px; font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:19px; letter-spacing:3px; color:#e8e9ee;">
+    <a href="Ruta16 Menu.dc.html">MENÚ</a><a href="Ruta16 Nosotros.dc.html">NOSOTROS</a><a href="Ruta16 Visita.dc.html">VISÍTANOS</a>
+  </div>
+  <a href="https://www.toasttab.com/local/order/mariscos-ruta-16-y-mas-12810-suit-b-gulf-fwy" target="_blank" style="background:#e2493b; color:#fff; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:19px; letter-spacing:2px; padding:12px 26px;">ORDER ONLINE</a>
+</div>
+<div style="position:relative; height:86vh; min-height:620px; overflow:hidden;">
+  <video src="uploads/IMG_6545.mp4" autoplay muted loop playsinline style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></video>
+  <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(20,23,34,.58) 0%, rgba(20,23,34,.3) 40%, rgba(20,23,34,.95) 100%);"></div>
+  <div style="position:absolute; inset:0; background:radial-gradient(60% 55% at 78% 62%, rgba(226,73,59,.22) 0%, rgba(20,23,34,0) 70%);"></div>
+  <div style="position:absolute; inset:0; background-image:radial-gradient(rgba(255,255,255,.10) 1px, transparent 1px); background-size:22px 22px; opacity:.35;"></div>
+  <div style="position:absolute; left:34px; top:0; bottom:0; display:flex; align-items:center;">
+    <div style="writing-mode:vertical-rl; transform:rotate(180deg); font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:16px; letter-spacing:6px; color:rgba(255,255,255,.55);">PARADA 01 · BIENVENIDOS A LA RUTA</div>
+  </div>
+  <div style="position:absolute; right:20px; bottom:-60px; font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:420px; line-height:1; color:rgba(255,255,255,.06);">16</div>
+  <img src="assets/dishes/parrillada-barco.png" alt="Parrillada en barco" style="position:absolute; right:-40px; bottom:26px; width:640px; max-width:46vw; animation:r16float 7s ease-in-out infinite; filter:drop-shadow(0 40px 46px rgba(0,0,0,.65)); pointer-events:none;">
+  <div style="position:absolute; left:120px; bottom:64px; max-width:700px; z-index:2; display:flex; flex-direction:column; gap:20px;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:20px; letter-spacing:8px; color:#e2493b;">MARISCOS · SINALOA STYLE · Y MÁS</div>
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:104px; line-height:.92; letter-spacing:1px; color:#fff;">LA RUTA<br>DEL SABOR</div>
+    <div style="font-size:19px; line-height:1.5; color:rgba(255,255,255,.8); max-width:520px;">Aguachiles, torres y zarandeados del asador — servidos como en Culiacán, aquí en Pasadena, TX.</div>
+    <div style="display:flex; gap:16px; margin-top:6px;">
+      <a href="Ruta16 Menu.dc.html" style="background:#e2493b; color:#fff; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:21px; letter-spacing:2px; padding:16px 36px;">VER MENÚ</a>
+      <a href="https://www.toasttab.com/local/order/mariscos-ruta-16-y-mas-12810-suit-b-gulf-fwy" target="_blank" style="border:2px solid rgba(255,255,255,.7); color:#fff; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:21px; letter-spacing:2px; padding:14px 36px;">ORDER ONLINE</a>
+    </div>
+  </div>
+</div>
+<div style="height:10px; background-image:repeating-linear-gradient(115deg, #e2493b 0 26px, #141722 26px 52px, #2f6fb5 52px 78px, #141722 78px 104px);"></div>
+<div style="display:flex; align-items:center; padding:22px 48px; border-bottom:1px solid rgba(255,255,255,.08);">
+  <sc-for list="{{ paradas }}" as="p" hint-placeholder-count="7">
+    <a href="Ruta16 Menu.dc.html" style="display:flex; align-items:center; gap:10px; flex:1; min-width:0;">
+      <div style="width:36px; height:36px; flex-shrink:0; border-radius:50%; border:2px dashed {{ p.ring }}; display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:15px; color:#fff;">{{ p.num }}</div>
+      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:16px; letter-spacing:1.5px; color:#e8e9ee; white-space:nowrap;">{{ p.name }}</div>
+      <div style="flex:1; min-width:12px; border-top:2px dotted rgba(255,255,255,.25); margin:0 8px;"></div>
+    </a>
+  </sc-for>
+</div>
+<div style="padding:80px 120px; display:flex; flex-direction:column; gap:48px; max-width:1440px; margin:0 auto; box-sizing:border-box;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+    <div style="display:flex; flex-direction:column; gap:8px;">
+      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:17px; letter-spacing:6px; color:#2f8fd5;">PARADA 02 · ZONA CULICHI</div>
+      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:56px; color:#fff;">TOP SELLERS</div>
+    </div>
+    <div style="font-size:16px; color:rgba(255,255,255,.6); max-width:340px; text-align:right;">Crudo, frío y con limón — como se come en Culiacán. Con tu salsa culichi.</div>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:40px;">
+    <sc-for list="{{ topSellers }}" as="t" hint-placeholder-count="4">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:18px;">
+        <div style="width:100%; aspect-ratio:1; border-radius:50%; border:2px dashed {{ t.ring }}; padding:10px; box-sizing:border-box;">
+          <img src="{{ t.img }}" alt="{{ t.name }}" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+        </div>
+        <div style="display:flex; align-items:baseline; gap:8px; width:100%;">
+          <div style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:23px; letter-spacing:1px; color:#fff; white-space:nowrap;">{{ t.name }}</div>
+          <div style="flex:1; border-bottom:2px dotted rgba(255,255,255,.3); transform:translateY(-4px);"></div>
+          <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:23px; color:#e2493b;">{{ t.price }}</div>
+        </div>
+        <div style="font-size:14.5px; line-height:1.45; color:rgba(255,255,255,.6); align-self:stretch;">{{ t.desc }}</div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+<div style="position:relative; padding:70px 120px 96px; background:#0e1119; border-top:1px solid rgba(255,255,255,.08); border-bottom:1px solid rgba(255,255,255,.08); overflow:hidden;">
+  <div style="position:absolute; inset:0; background-image:radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px); background-size:26px 26px; pointer-events:none;"></div>
+  <div style="max-width:1440px; margin:0 auto; display:flex; flex-direction:column; gap:24px; position:relative;">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+      <div style="display:flex; flex-direction:column; gap:8px;">
+        <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:17px; letter-spacing:6px; color:#e2493b;">SIETE PARADAS · UN SOLO VIAJE</div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:56px; color:#fff;">PLATOS DE LA RUTA</div>
+      </div>
+      <a href="Ruta16 Menu.dc.html" style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:19px; letter-spacing:3px; color:#2f8fd5; border-bottom:2px dotted rgba(47,143,213,.5); padding-bottom:4px;">VER EL MENÚ COMPLETO →</a>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:96px 40px; margin-top:76px;">
+      <sc-for list="{{ platos }}" as="d" hint-placeholder-count="6">
+        <a href="Ruta16 Menu.dc.html" style="display:flex; flex-direction:column; align-items:center; padding:0 26px 30px; background:#141722; border:1px solid rgba(255,255,255,.1); transition:border-color .35s, transform .35s;" style-hover="border-color:{{ d.accent }}; transform:translateY(-6px)">
+          <div style="width:100%; height:190px; margin-top:-72px; display:flex; align-items:flex-end; justify-content:center; background:{{ d.glow }};">
+            <img src="{{ d.img }}" alt="{{ d.name }}" style="max-width:270px; max-height:230px; filter:drop-shadow(0 26px 30px rgba(0,0,0,.6));">
+          </div>
+          <div style="display:flex; align-items:center; gap:10px; margin-top:22px;">
+            <div style="width:30px; height:30px; border-radius:50%; border:2px dashed {{ d.accent }}; display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:13px; color:#fff;">{{ d.num }}</div>
+            <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:13px; letter-spacing:4px; color:rgba(255,255,255,.5);">{{ d.parada }}</div>
+          </div>
+          <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:30px; letter-spacing:1px; color:#fff; margin-top:10px; text-align:center;">{{ d.name }}</div>
+          <div style="font-size:14.5px; line-height:1.5; color:rgba(255,255,255,.58); text-align:center; margin-top:8px; text-wrap:pretty;">{{ d.desc }}</div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</div>
+<div style="position:relative; padding:74px 0 60px; overflow:hidden;">
+  <div style="display:flex; flex-direction:column; gap:8px; padding:0 120px 44px;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:17px; letter-spacing:6px; color:#2f8fd5;">PARADA 07 · ÚLTIMA PARADA</div>
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:56px; color:#fff;">LA BARRA</div>
+    <div style="font-size:16px; color:rgba(255,255,255,.6); max-width:520px;">Micheladas preparadas, daiquiris y buckets de cheves — el patio se pone bueno después de las 9.</div>
+  </div>
+  <div style="display:flex; width:max-content; animation:r16drift 46s linear infinite;">
+    <div style="display:flex; gap:64px; padding-right:64px; align-items:flex-end;">
+      <sc-for list="{{ barra }}" as="b" hint-placeholder-count="9">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:14px; width:190px;">
+          <img src="{{ b.img }}" alt="{{ b.name }}" style="height:250px; object-fit:contain; filter:drop-shadow(0 24px 26px rgba(0,0,0,.6));">
+          <div style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:17px; letter-spacing:2px; color:rgba(255,255,255,.75); text-align:center;">{{ b.name }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:flex; gap:64px; padding-right:64px; align-items:flex-end;">
+      <sc-for list="{{ barra }}" as="b" hint-placeholder-count="9">
+        <div style="display:flex; flex-direction:column; align-items:center; gap:14px; width:190px;">
+          <img src="{{ b.img }}" alt="{{ b.name }}" style="height:250px; object-fit:contain; filter:drop-shadow(0 24px 26px rgba(0,0,0,.6));">
+          <div style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:17px; letter-spacing:2px; color:rgba(255,255,255,.75); text-align:center;">{{ b.name }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+<div style="display:flex; border-top:1px solid rgba(255,255,255,.08); border-bottom:1px solid rgba(255,255,255,.08);">
+  <div style="flex:1; min-height:172px; padding:36px 48px; background:#e2493b; display:flex; flex-direction:column; gap:6px; justify-content:center; position:relative; overflow:hidden;">
+    <img src="assets/dishes/tacos.png" alt="Tacos" style="position:absolute; right:-30px; bottom:-26px; width:190px; filter:drop-shadow(0 18px 24px rgba(0,0,0,.45)); pointer-events:none;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:30px; color:#fff; position:relative;">MARTES ¡DESTACADO!</div>
+    <div style="font-size:15px; color:rgba(255,255,255,.85); position:relative; max-width:240px;">Especial de tacos todos los martes.</div>
+  </div>
+  <div style="flex:1; min-height:172px; padding:36px 48px; background:#2f6fb5; display:flex; flex-direction:column; gap:6px; justify-content:center; position:relative; overflow:hidden;">
+    <img src="assets/drinks/semaforo.png" alt="Semáforo" style="position:absolute; right:14px; bottom:-40px; width:150px; filter:drop-shadow(0 18px 24px rgba(0,0,0,.45)); pointer-events:none;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:30px; color:#fff; position:relative;">MIÉRCOLES ¡JALEDAY!</div>
+    <div style="font-size:15px; color:rgba(255,255,255,.85); position:relative; max-width:260px;">El meridiano de la semana se celebra aquí.</div>
+  </div>
+  <div style="flex:1; min-height:172px; padding:36px 48px; background:#0e1119; display:flex; flex-direction:column; gap:6px; justify-content:center; position:relative; overflow:hidden;">
+    <img src="assets/drinks/carajillo.png" alt="Carajillo" style="position:absolute; right:18px; bottom:-26px; width:128px; filter:drop-shadow(0 18px 24px rgba(0,0,0,.6)); pointer-events:none;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:30px; color:#fff; position:relative;">HAPPY HOUR</div>
+    <div style="font-size:15px; color:rgba(255,255,255,.7); position:relative; max-width:215px;">Cheves, micheladas y buckets — última parada.</div>
+  </div>
+</div>
+<div style="display:flex; align-items:stretch;">
+  <div style="width:46%; min-height:460px; overflow:hidden;">
+    <img src="uploads/unnamed (26).webp" alt="El patio" style="width:100%; height:100%; object-fit:cover;">
+  </div>
+  <div style="flex:1; padding:70px 90px; display:flex; flex-direction:column; gap:22px; justify-content:center; position:relative; overflow:hidden;">
+    <img src="assets/drinks/michelada.png" alt="Michelada preparada" style="position:absolute; right:-46px; bottom:-40px; width:270px; opacity:.9; filter:drop-shadow(0 26px 30px rgba(0,0,0,.6)); pointer-events:none;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:17px; letter-spacing:6px; color:#e2493b; position:relative;">EL PATIO · PASADENA, TX</div>
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:48px; line-height:1; color:#fff; position:relative;">LA RUTA DEL SABOR,<br>AL AIRE LIBRE</div>
+    <div style="font-size:17px; line-height:1.6; color:rgba(255,255,255,.7); position:relative;">2726 Spencer Hwy, Pasadena, TX 77504<br>(346) 320-4136</div>
+    <div style="display:flex; gap:40px; margin-top:8px; position:relative;">
+      <div style="display:flex; flex-direction:column; gap:4px;">
+        <div style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:18px; letter-spacing:2px; color:#2f8fd5;">DOM – MAR</div>
+        <div style="font-size:15px; color:rgba(255,255,255,.7);">11 AM – 10 PM</div>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:4px;">
+        <div style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:18px; letter-spacing:2px; color:#2f8fd5;">MIÉ – SÁB</div>
+        <div style="font-size:15px; color:rgba(255,255,255,.7);">11 AM – MEDIANOCHE +</div>
+      </div>
+    </div>
+    <a href="Ruta16 Visita.dc.html" style="align-self:flex-start; margin-top:6px; border:2px solid rgba(255,255,255,.5); color:#fff; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:18px; letter-spacing:2px; padding:12px 28px; position:relative;">CÓMO LLEGAR →</a>
+  </div>
+</div>
+<div style="padding:80px 120px; display:flex; flex-direction:column; gap:40px; border-top:1px solid rgba(255,255,255,.08); max-width:1440px; margin:0 auto; box-sizing:border-box;">
+  <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:44px; color:#fff; text-align:center;">DICEN EN LA RUTA</div>
+  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:32px;">
+    <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+      <div style="border:1px solid rgba(255,255,255,.12); padding:28px; display:flex; flex-direction:column; gap:14px;">
+        <div style="color:#e2493b; font-size:18px; letter-spacing:3px;">★★★★★</div>
+        <div style="font-size:16px; line-height:1.55; color:rgba(255,255,255,.8);">{{ r.quote }}</div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:17px; letter-spacing:2px; color:#2f8fd5;">{{ r.name }}</div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+<div style="padding:34px 48px; border-top:1px solid rgba(255,255,255,.08); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+  <div style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:18px; letter-spacing:3px; color:rgba(255,255,255,.5);">GRACIAS POR VIAJAR LA RUTA DEL SABOR</div>
+  <div style="display:flex; gap:24px; font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:16px; letter-spacing:2px; color:rgba(255,255,255,.6);">
+    <a href="https://www.instagram.com/r16_pasadena" target="_blank">INSTAGRAM</a><a href="https://www.facebook.com/profile.php?id=100085122138803" target="_blank">FACEBOOK</a><a href="https://www.tiktok.com/@mariscosr16" target="_blank">TIKTOK</a>
+  </div>
+</div>
+<div style="display:flex; height:6px;"><div style="flex:1; background:#e2493b;"></div><div style="flex:1; background:#2f6fb5;"></div></div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440}}">
+class Component extends DCLogic {
+  renderVals() {
+    const R = '#e2493b', B = '#2f8fd5';
+    const ring = i => (i % 2 === 0 ? R : B);
+    const glow = c => 'radial-gradient(circle at 50% 66%, ' + c + ' 0%, rgba(20,23,34,0) 66%)';
+    return {
+      paradas: ['APPETIZERS','ZONA CULICHI','RUTA CALIENTE','MARISCOS','PARRILLADAS','Y MÁS','MORRITOS & DESSERT','CHEVES'].map((name, i) => ({ num: '0' + (i + 1), name, ring: ring(i) })),
+      topSellers: [
+        { name: 'TORRE 16', price: '$29', img: 'uploads/unnamed (22).webp', ring: R, desc: 'Mixed ceviche, scallops, boiled shrimp, 6 aguachiles — dipped in culichi sauce.' },
+        { name: 'LA CHAPARRA', price: '$29', img: 'uploads/unnamed (31).webp', ring: B, desc: 'Molcajete bowl: seafood tower, green mussels, avocado, culichi sauce.' },
+        { name: 'OSTIONES R16', price: '$16', img: 'uploads/unnamed (27).webp', ring: R, desc: 'Grilled oysters — bacon, chorizo, mozzarella, jalapeño, camarada sauce.' },
+        { name: 'ZARANDEADO', price: '$MP', img: 'uploads/unnamed (25).webp', ring: B, desc: 'Whole fish from the open-fire grill, secret sauce, fried rice, house salad.' },
+      ],
+      platos: [
+        { num: '01', parada: 'APPETIZERS', name: 'OSTIONES EN CONCHA', img: 'assets/dishes/ostiones.png', accent: R, glow: glow('rgba(226,73,59,.30)'), desc: 'Docena fresca sobre hielo, con salsa de la casa.' },
+        { num: '02', parada: 'ZONA CULICHI', name: 'AGUACHILE', img: 'assets/dishes/aguachile.png', accent: B, glow: glow('rgba(47,143,213,.30)'), desc: 'Camarón curtido, pepino, cebolla morada y aguacate.' },
+        { num: '03', parada: 'RUTA CALIENTE', name: 'CALDO DE MARISCOS', img: 'assets/dishes/caldo-mariscos.png', accent: R, glow: glow('rgba(226,73,59,.30)'), desc: 'Jaiba, almeja y calamar — con arroz y pan de ajo.' },
+        { num: '04', parada: 'MARISCOS', name: 'SALMÓN R16', img: 'assets/dishes/salmon.png', accent: B, glow: glow('rgba(47,143,213,.30)'), desc: 'Relleno de crema, espinaca y queso — arroz de la casa y vegetales.' },
+        { num: '05', parada: 'PARRILLADAS', name: 'MAR Y TIERRA', img: 'assets/dishes/parrillada-barco.png', accent: R, glow: glow('rgba(226,73,59,.30)'), desc: 'Barco pa\' la mesa grande — mar, tierra y brasa. $45' },
+        { num: '06', parada: 'Y MÁS', name: 'TACOS DE LA CASA', img: 'assets/dishes/tacos.png', accent: B, glow: glow('rgba(47,143,213,.30)'), desc: 'Gobernador, quesabirria, rib eye o bang bang shrimp.' },
+      ],
+      barra: [
+        { name: 'MICHELADA', img: 'assets/drinks/michelada.png' },
+        { name: 'MARGARITA DE FRESA', img: 'assets/drinks/margarita-fresa.png' },
+        { name: 'PIÑA COLADA', img: 'assets/drinks/pina-colada.png' },
+        { name: 'SEMÁFORO', img: 'assets/drinks/semaforo.png' },
+        { name: 'BLUE LAGOON', img: 'assets/drinks/blue-lagoon.png' },
+        { name: 'HURACÁN VERDE', img: 'assets/drinks/hurricane-verde.png' },
+        { name: 'PONCHE R16', img: 'assets/drinks/ponche.png' },
+        { name: 'MOJITO', img: 'assets/drinks/mojito.png' },
+        { name: 'CARAJILLO', img: 'assets/drinks/carajillo.png' },
+      ],
+      reviews: [
+        { quote: '"The food was delicious and fresh… the music really set the mood."', name: 'R C.' },
+        { quote: '"Hosted a 30-person birthday and the manager Johan took care of everything."', name: 'CRYSTAL S.' },
+        { quote: '"Rachel made sure our table never waited — great service, great ceviche."', name: 'TERESA G.' },
+      ],
+    };
+  }
+}
+
+</script>
+</body>
+</html>

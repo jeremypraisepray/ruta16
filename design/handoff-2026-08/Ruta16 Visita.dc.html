@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body { margin:0; background:#141722; font-family:'Barlow',sans-serif; }
+a { color:inherit; text-decoration:none; }
+a:hover { color:#e2493b; }
+</style>
+</helmet>
+<div style="display:flex; height:6px;"><div style="flex:1; background:#e2493b;"></div><div style="flex:1; background:#2f6fb5;"></div></div>
+<div style="position:sticky; top:0; z-index:40; display:flex; align-items:center; justify-content:space-between; padding:12px 48px; border-bottom:1px solid rgba(255,255,255,.08); background:rgba(20,23,34,.93); backdrop-filter:blur(8px);">
+  <a href="Ruta16 Home.dc.html"><img src="https://ruta16.com/pluto-images/brand-logos/3b541599-75f4-485a-85d0-23b15a895e42.png" alt="Ruta 16" style="height:58px; display:block;"></a>
+  <div style="display:flex; gap:36px; font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:19px; letter-spacing:3px; color:#e8e9ee;">
+    <a href="Ruta16 Menu.dc.html">MENÚ</a><a href="Ruta16 Nosotros.dc.html">NOSOTROS</a><a href="Ruta16 Visita.dc.html" style="color:#e2493b;">VISÍTANOS</a>
+  </div>
+  <a href="https://www.toasttab.com/local/order/mariscos-ruta-16-y-mas-12810-suit-b-gulf-fwy" target="_blank" style="background:#e2493b; color:#fff; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:19px; letter-spacing:2px; padding:12px 26px;">ORDER ONLINE</a>
+</div>
+<div style="position:relative; overflow:hidden;">
+  <div style="position:absolute; inset:0; background-image:radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px); background-size:26px 26px; pointer-events:none;"></div>
+  <div style="position:absolute; right:0; top:0; bottom:0; width:520px; background:radial-gradient(circle at 62% 55%, rgba(226,73,59,.24) 0%, rgba(20,23,34,0) 68%); pointer-events:none;"></div>
+  <img src="assets/dishes/mar-y-tierra-v.png" alt="Mar y tierra del asador" style="position:absolute; right:96px; top:36px; width:280px; filter:drop-shadow(0 30px 36px rgba(0,0,0,.62)); pointer-events:none;">
+  <div style="padding:72px 120px 56px; display:flex; flex-direction:column; gap:12px; max-width:1440px; margin:0 auto; box-sizing:border-box; position:relative; min-height:450px; justify-content:center;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:18px; letter-spacing:8px; color:#e2493b;">ÚLTIMA PARADA · PASADENA, TX</div>
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:88px; line-height:.95; color:#fff;">VISÍTANOS</div>
+  </div>
+</div>
+<div style="display:grid; grid-template-columns:1.1fr 1fr; gap:0; border-top:1px solid rgba(255,255,255,.08);">
+  <div style="min-height:560px; overflow:hidden; position:relative;">
+    <img src="uploads/unnamed (26).webp" alt="El patio de Ruta 16" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+    <div style="position:absolute; left:24px; bottom:24px; background:rgba(20,23,34,.85); padding:14px 22px; display:flex; flex-direction:column; gap:2px;">
+      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:20px; letter-spacing:2px; color:#fff;">EL PATIO</div>
+      <div style="font-size:14px; color:rgba(255,255,255,.7);">La ruta del sabor, al aire libre.</div>
+    </div>
+  </div>
+  <div style="padding:64px 80px; display:flex; flex-direction:column; gap:36px; border-left:1px solid rgba(255,255,255,.08);">
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:15px; letter-spacing:5px; color:#2f8fd5;">DIRECCIÓN</div>
+      <a href="https://maps.google.com/?q=2726+Spencer+Hwy,+Pasadena,+TX+77504" target="_blank" style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:34px; line-height:1.1; color:#fff;">2726 SPENCER HWY<br>PASADENA, TX 77504 ↗</a>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:15px; letter-spacing:5px; color:#2f8fd5;">CONTACTO</div>
+      <a href="tel:3463204136" style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:26px; color:#fff;">(346) 320-4136</a>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:14px;">
+      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:15px; letter-spacing:5px; color:#2f8fd5;">HORARIO</div>
+      <sc-for list="{{ hours }}" as="h" hint-placeholder-count="7">
+        <div style="display:flex; align-items:baseline; gap:12px;">
+          <div style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:19px; letter-spacing:2px; color:#fff; width:110px;">{{ h.day }}</div>
+          <div style="flex:1; border-bottom:2px dotted rgba(255,255,255,.2); transform:translateY(-4px);"></div>
+          <div style="font-size:16px; color:rgba(255,255,255,.75);">{{ h.time }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+<div style="display:flex; border-top:1px solid rgba(255,255,255,.08); border-bottom:1px solid rgba(255,255,255,.08);">
+  <div style="flex:1; min-height:172px; padding:36px 48px; background:#e2493b; display:flex; flex-direction:column; gap:6px; justify-content:center; position:relative; overflow:hidden;">
+    <img src="assets/dishes/tacos.png" alt="Tacos" style="position:absolute; right:-30px; bottom:-26px; width:190px; filter:drop-shadow(0 18px 24px rgba(0,0,0,.45)); pointer-events:none;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:30px; color:#fff; position:relative;">MARTES ¡DESTACADO!</div>
+    <div style="font-size:15px; color:rgba(255,255,255,.85); position:relative; max-width:240px;">Especial de tacos todos los martes.</div>
+  </div>
+  <div style="flex:1; min-height:172px; padding:36px 48px; background:#2f6fb5; display:flex; flex-direction:column; gap:6px; justify-content:center; position:relative; overflow:hidden;">
+    <img src="assets/drinks/semaforo.png" alt="Semáforo" style="position:absolute; right:14px; bottom:-40px; width:150px; filter:drop-shadow(0 18px 24px rgba(0,0,0,.45)); pointer-events:none;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:30px; color:#fff; position:relative;">MIÉRCOLES ¡JALEDAY!</div>
+    <div style="font-size:15px; color:rgba(255,255,255,.85); position:relative; max-width:260px;">El meridiano de la semana se celebra aquí.</div>
+  </div>
+  <div style="flex:1; min-height:172px; padding:36px 48px; background:#0e1119; display:flex; flex-direction:column; gap:6px; justify-content:center; position:relative; overflow:hidden;">
+    <img src="assets/drinks/michelada.png" alt="Michelada preparada" style="position:absolute; right:6px; bottom:-30px; width:152px; filter:drop-shadow(0 18px 24px rgba(0,0,0,.6)); pointer-events:none;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:30px; color:#fff; position:relative;">HAPPY HOUR</div>
+    <div style="font-size:15px; color:rgba(255,255,255,.7); position:relative; max-width:215px;">Cheves, micheladas y buckets — última parada.</div>
+  </div>
+</div>
+<div style="padding:64px 120px; display:flex; flex-direction:column; gap:24px; max-width:1440px; margin:0 auto; box-sizing:border-box;">
+  <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:36px; margin:72px 0 20px;">
+    <sc-for list="{{ llevar }}" as="l" hint-placeholder-count="3">
+      <div style="display:flex; align-items:center; gap:22px; background:#0e1119; border:1px solid rgba(255,255,255,.1); padding:22px 26px 22px 12px; transition:border-color .35s, transform .35s;" style-hover="border-color:{{ l.accent }}; transform:translateY(-6px)">
+        <div style="width:170px; flex-shrink:0; display:flex; align-items:center; justify-content:center; background:{{ l.glow }};">
+          <img src="{{ l.img }}" alt="{{ l.name }}" style="max-width:210px; max-height:170px; margin:-16px -20px; filter:drop-shadow(0 22px 26px rgba(0,0,0,.6));">
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:24px; letter-spacing:1px; color:#fff;">{{ l.name }}</div>
+          <div style="font-size:14.5px; line-height:1.45; color:rgba(255,255,255,.58); text-wrap:pretty;">{{ l.desc }}</div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+  <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:16px; letter-spacing:6px; color:#e2493b;">PIDE PA' LLEVAR · TOAST ONLINE</div>
+  <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:40px; color:#fff;">SERVIMOS TODA LA ZONA</div>
+  <div style="display:flex; flex-wrap:wrap; gap:12px;">
+    <sc-for list="{{ areas }}" as="a" hint-placeholder-count="8">
+      <div style="border:1px solid rgba(255,255,255,.2); padding:10px 20px; font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:17px; letter-spacing:2px; color:rgba(255,255,255,.8);">{{ a }}</div>
+    </sc-for>
+  </div>
+  <div style="display:flex; gap:16px; margin-top:12px;">
+    <a href="https://www.toasttab.com/local/order/mariscos-ruta-16-y-mas-12810-suit-b-gulf-fwy" target="_blank" style="background:#e2493b; color:#fff; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:20px; letter-spacing:2px; padding:16px 36px;">ORDER ONLINE</a>
+    <a href="https://maps.google.com/?q=2726+Spencer+Hwy,+Pasadena,+TX+77504" target="_blank" style="border:2px solid rgba(255,255,255,.7); color:#fff; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:20px; letter-spacing:2px; padding:14px 36px;">CÓMO LLEGAR</a>
+  </div>
+</div>
+<div style="padding:34px 48px; border-top:1px solid rgba(255,255,255,.08); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+  <div style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:18px; letter-spacing:3px; color:rgba(255,255,255,.5);">GRACIAS POR VIAJAR LA RUTA DEL SABOR</div>
+  <div style="display:flex; gap:24px; font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:16px; letter-spacing:2px; color:rgba(255,255,255,.6);">
+    <a href="https://www.instagram.com/r16_pasadena" target="_blank">INSTAGRAM</a><a href="https://www.facebook.com/profile.php?id=100085122138803" target="_blank">FACEBOOK</a><a href="https://www.tiktok.com/@mariscosr16" target="_blank">TIKTOK</a>
+  </div>
+</div>
+<div style="display:flex; height:6px;"><div style="flex:1; background:#e2493b;"></div><div style="flex:1; background:#2f6fb5;"></div></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const R = '#e2493b', B = '#2f8fd5';
+    const glow = c => 'radial-gradient(circle at 50% 52%, ' + c + ' 0%, rgba(20,23,34,0) 66%)';
+    return {
+      llevar: [
+        { name: 'CALDO DE MARISCOS', img: 'assets/dishes/caldo-mariscos.png', accent: R, glow: glow('rgba(226,73,59,.30)'), desc: 'Bien caliente, con arroz y pan de ajo aparte.' },
+        { name: 'ARROZ MIXTO', img: 'assets/dishes/arroz-mixto.png', accent: B, glow: glow('rgba(47,143,213,.30)'), desc: 'Camarón y pollo — el que alcanza para dos.' },
+        { name: 'EMPANIZADOS', img: 'assets/dishes/empanizados.png', accent: R, glow: glow('rgba(226,73,59,.30)'), desc: 'Filete y camarón, crujientes hasta la casa.' },
+      ],
+      hours: [
+        { day: 'DOMINGO', time: '11 AM – 10 PM' },
+        { day: 'LUNES', time: '11 AM – 12 AM' },
+        { day: 'MARTES', time: '11 AM – 10 PM' },
+        { day: 'MIÉRCOLES', time: '11 AM – 12 AM' },
+        { day: 'JUEVES', time: '11 AM – 12 AM' },
+        { day: 'VIERNES', time: '11 AM – 12 AM' },
+        { day: 'SÁBADO', time: '11 AM – 2 AM' },
+      ],
+      areas: ['PASADENA', 'SOUTH HOUSTON', 'DEER PARK', 'GALENA PARK', 'PEARLAND', 'LA PORTE', 'CLEAR LAKE CITY', 'CHANNELVIEW'],
+    };
+  }
+}
+</script>
+</body>
+</html>

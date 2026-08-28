@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import SiteNav from '@/components/SiteNav';
+import Cutout from '@/components/Cutout';
+import { RED, BLUE, plateGlow } from '@/data/site';
 
 export const metadata = {
   title: 'Nosotros',
@@ -25,6 +27,33 @@ const PILLARS = [
     color: '#e2493b',
     title: 'EL PATIO',
     text: 'La ruta del sabor al aire libre — música en vivo, micheladas preparadas y buckets de cheves.',
+  },
+];
+
+const COCINA = [
+  {
+    name: 'CAMARONES A LA DIABLA',
+    img: '/images/dishes/camarones-diabla.webp',
+    accent: RED,
+    desc: 'Salsa devil, papas salteadas y ensalada de la casa.',
+  },
+  {
+    name: 'MOJARRA AL GUSTO',
+    img: '/images/dishes/mojarra.webp',
+    accent: BLUE,
+    desc: 'Al ajo rostizado, molcajeteada o a la plancha.',
+  },
+  {
+    name: 'EMPANIZADOS',
+    img: '/images/dishes/empanizados.webp',
+    accent: RED,
+    desc: 'Filete y camarón empanizado con arroz frito.',
+  },
+  {
+    name: 'PASTA ALFREDO',
+    img: '/images/dishes/pasta-alfredo.webp',
+    accent: BLUE,
+    desc: 'Fettuccine con pollo, camarón o salmón.',
   },
 ];
 
@@ -57,6 +86,12 @@ export default function NosotrosPage() {
           aria-hidden="true"
         />
         <div className="subHero__scrim" />
+        <Cutout
+          className="subHero__dish"
+          src="/images/dishes/coctel-ceviche.webp"
+          alt="Cóctel de camarón y ceviche"
+          priority
+        />
         <div className="subHero__content">
           <div className="subHero__eyebrow">NOSOTROS</div>
           <h1 className="subHero__title">
@@ -100,6 +135,29 @@ export default function NosotrosPage() {
             <p className="pillar__text">{p.text}</p>
           </article>
         ))}
+      </section>
+
+      <section className="cocina">
+        <div className="dotOverlay" />
+        <div className="cocina__inner">
+          <div className="eyebrow">DE LA COCINA A LA MESA</div>
+          <h2 className="cocina__title">LO QUE SALE DEL PASE</h2>
+          <div className="cocina__grid">
+            {COCINA.map((c) => (
+              <article
+                key={c.name}
+                className="dishCard dishCard--cocina"
+                style={{ '--accent': c.accent }}
+              >
+                <div className="dishCard__plate" style={{ background: plateGlow(c.accent) }}>
+                  <Cutout src={c.img} alt={c.name} box={[250, 210]} />
+                </div>
+                <div className="dishCard__name">{c.name}</div>
+                <div className="dishCard__desc">{c.desc}</div>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="postales">

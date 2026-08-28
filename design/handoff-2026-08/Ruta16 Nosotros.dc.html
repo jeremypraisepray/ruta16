@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body { margin:0; background:#141722; font-family:'Barlow',sans-serif; }
+a { color:inherit; text-decoration:none; }
+a:hover { color:#e2493b; }
+@keyframes r16float { 0%,100% { transform:translateY(0) rotate(-2deg); } 50% { transform:translateY(-16px) rotate(0deg); } }
+</style>
+</helmet>
+<div style="display:flex; height:6px;"><div style="flex:1; background:#e2493b;"></div><div style="flex:1; background:#2f6fb5;"></div></div>
+<div style="position:sticky; top:0; z-index:40; display:flex; align-items:center; justify-content:space-between; padding:12px 48px; border-bottom:1px solid rgba(255,255,255,.08); background:rgba(20,23,34,.93); backdrop-filter:blur(8px);">
+  <a href="Ruta16 Home.dc.html"><img src="https://ruta16.com/pluto-images/brand-logos/3b541599-75f4-485a-85d0-23b15a895e42.png" alt="Ruta 16" style="height:58px; display:block;"></a>
+  <div style="display:flex; gap:36px; font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:19px; letter-spacing:3px; color:#e8e9ee;">
+    <a href="Ruta16 Menu.dc.html">MENÚ</a><a href="Ruta16 Nosotros.dc.html" style="color:#e2493b;">NOSOTROS</a><a href="Ruta16 Visita.dc.html">VISÍTANOS</a>
+  </div>
+  <a href="https://www.toasttab.com/local/order/mariscos-ruta-16-y-mas-12810-suit-b-gulf-fwy" target="_blank" style="background:#e2493b; color:#fff; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:19px; letter-spacing:2px; padding:12px 26px;">ORDER ONLINE</a>
+</div>
+<div style="position:relative; height:56vh; min-height:420px; overflow:hidden;">
+  <video src="uploads/v15044gf0000d9vtscnog65sq6ti7o2g.MP4" autoplay muted loop playsinline style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"></video>
+  <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(20,23,34,.5) 0%, rgba(20,23,34,.9) 100%);"></div>
+  <img src="assets/dishes/coctel-ceviche.png" alt="Cóctel de camarón y ceviche" style="position:absolute; right:40px; bottom:30px; width:430px; max-width:38vw; animation:r16float 8s ease-in-out infinite; filter:drop-shadow(0 34px 40px rgba(0,0,0,.65)); pointer-events:none;">
+  <div style="position:absolute; left:120px; bottom:56px; display:flex; flex-direction:column; gap:14px;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:18px; letter-spacing:8px; color:#e2493b;">NOSOTROS</div>
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:76px; line-height:.95; color:#fff;">DE CULIACÁN<br>A SPENCER HWY</div>
+  </div>
+</div>
+<div style="padding:88px 120px; display:grid; grid-template-columns:1fr 1fr; gap:80px; max-width:1440px; margin:0 auto; box-sizing:border-box; align-items:center;">
+  <div style="display:flex; flex-direction:column; gap:22px;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:44px; line-height:1; color:#fff;">LA RUTA EMPIEZA<br>EN SINALOA</div>
+    <div style="font-size:17.5px; line-height:1.7; color:rgba(255,255,255,.72);">Ruta 16 nació de un antojo: mariscos como se comen en Culiacán — crudos, fríos y con limón — servidos con la música alta y los platos al centro de la mesa. Del aguachile negro a la torre de mariscos, cada receta viajó la ruta desde Sinaloa hasta Pasadena, Texas.</div>
+    <div style="font-size:17.5px; line-height:1.7; color:rgba(255,255,255,.72);">Nuestro menú se recorre como una carretera: siete paradas, del raw bar de la Zona Culichi al asador de fuego abierto, con la última parada siempre en las cheves.</div>
+  </div>
+  <div style="position:relative;">
+    <img src="uploads/unnamed (22).webp" alt="Torre de mariscos" style="width:100%; height:520px; object-fit:cover; display:block;">
+    <div style="position:absolute; top:-14px; left:-14px; right:14px; bottom:14px; border:2px dashed rgba(226,73,59,.5); pointer-events:none;"></div>
+  </div>
+</div>
+<div style="display:grid; grid-template-columns:repeat(3, 1fr); border-top:1px solid rgba(255,255,255,.08); border-bottom:1px solid rgba(255,255,255,.08);">
+  <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="3">
+    <div style="padding:48px; display:flex; flex-direction:column; gap:12px; border-right:1px solid rgba(255,255,255,.08);">
+      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:60px; line-height:1; color:{{ p.color }};">{{ p.num }}</div>
+      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:26px; letter-spacing:1px; color:#fff;">{{ p.title }}</div>
+      <div style="font-size:15.5px; line-height:1.55; color:rgba(255,255,255,.65);">{{ p.text }}</div>
+    </div>
+  </sc-for>
+</div>
+<div style="position:relative; padding:76px 120px 88px; background:#0e1119; border-bottom:1px solid rgba(255,255,255,.08); overflow:hidden;">
+  <div style="position:absolute; inset:0; background-image:radial-gradient(rgba(255,255,255,.07) 1px, transparent 1px); background-size:26px 26px; pointer-events:none;"></div>
+  <div style="max-width:1440px; margin:0 auto; display:flex; flex-direction:column; gap:12px; position:relative;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:17px; letter-spacing:6px; color:#e2493b;">DE LA COCINA A LA MESA</div>
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:52px; color:#fff;">LO QUE SALE DEL PASE</div>
+    <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:32px; margin-top:88px;">
+      <sc-for list="{{ cocina }}" as="c" hint-placeholder-count="4">
+        <div style="display:flex; flex-direction:column; align-items:center; padding:0 22px 26px; border:1px solid rgba(255,255,255,.1); background:#141722; transition:border-color .35s, transform .35s;" style-hover="border-color:{{ c.accent }}; transform:translateY(-6px)">
+          <div style="width:100%; height:170px; margin-top:-66px; display:flex; align-items:flex-end; justify-content:center; background:{{ c.glow }};">
+            <img src="{{ c.img }}" alt="{{ c.name }}" style="max-width:250px; max-height:210px; filter:drop-shadow(0 26px 30px rgba(0,0,0,.6));">
+          </div>
+          <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:26px; letter-spacing:1px; color:#fff; margin-top:20px; text-align:center;">{{ c.name }}</div>
+          <div style="font-size:14.5px; line-height:1.5; color:rgba(255,255,255,.58); text-align:center; margin-top:7px; text-wrap:pretty;">{{ c.desc }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</div>
+<div style="padding:88px 120px; display:flex; flex-direction:column; gap:40px; max-width:1440px; margin:0 auto; box-sizing:border-box;">
+  <div style="display:flex; align-items:baseline; justify-content:space-between;">
+    <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:52px; color:#fff;">POSTALES DE LA RUTA</div>
+    <a href="https://www.instagram.com/r16_pasadena" target="_blank" style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:16px; letter-spacing:4px; color:rgba(255,255,255,.5);">@R16_PASADENA</a>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:16px;">
+    <img src="uploads/unnamed (31).webp" alt="Molcajete aguachile" style="width:100%; height:280px; object-fit:cover;">
+    <img src="uploads/unnamed (27).webp" alt="Ostiones R16" style="width:100%; height:280px; object-fit:cover;">
+    <img src="uploads/unnamed (24).webp" alt="Lobster" style="width:100%; height:280px; object-fit:cover;">
+    <img src="uploads/unnamed (23).webp" alt="Michelada" style="width:100%; height:280px; object-fit:cover;">
+    <img src="uploads/unnamed (29).webp" alt="Parrillada en barco" style="width:100%; height:280px; object-fit:cover;">
+    <img src="uploads/unnamed (25).webp" alt="Pescado zarandeado" style="width:100%; height:280px; object-fit:cover;">
+    <img src="uploads/unnamed (30).webp" alt="Camarones fritos" style="width:100%; height:280px; object-fit:cover;">
+    <img src="uploads/unnamed (32).webp" alt="Micheladas y piña colada" style="width:100%; height:280px; object-fit:cover;">
+  </div>
+</div>
+<div style="padding:72px 120px; border-top:1px solid rgba(255,255,255,.08); display:flex; flex-direction:column; gap:24px; align-items:center; text-align:center;">
+  <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:44px; color:#fff;">VEN A RECORRER LA RUTA</div>
+  <div style="display:flex; gap:16px;">
+    <a href="Ruta16 Menu.dc.html" style="background:#e2493b; color:#fff; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:20px; letter-spacing:2px; padding:16px 36px;">VER MENÚ</a>
+    <a href="Ruta16 Visita.dc.html" style="border:2px solid rgba(255,255,255,.7); color:#fff; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:20px; letter-spacing:2px; padding:14px 36px;">VISÍTANOS</a>
+  </div>
+</div>
+<div style="display:flex; height:6px;"><div style="flex:1; background:#e2493b;"></div><div style="flex:1; background:#2f6fb5;"></div></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const R = '#e2493b', B = '#2f8fd5';
+    const glow = c => 'radial-gradient(circle at 50% 66%, ' + c + ' 0%, rgba(20,23,34,0) 66%)';
+    return {
+      cocina: [
+        { name: 'CAMARONES A LA DIABLA', img: 'assets/dishes/camarones-diabla.png', accent: R, glow: glow('rgba(226,73,59,.30)'), desc: 'Salsa devil, papas salteadas y ensalada de la casa.' },
+        { name: 'MOJARRA AL GUSTO', img: 'assets/dishes/mojarra.png', accent: B, glow: glow('rgba(47,143,213,.30)'), desc: 'Al ajo rostizado, molcajeteada o a la plancha.' },
+        { name: 'EMPANIZADOS', img: 'assets/dishes/empanizados.png', accent: R, glow: glow('rgba(226,73,59,.30)'), desc: 'Filete y camarón empanizado con arroz frito.' },
+        { name: 'PASTA ALFREDO', img: 'assets/dishes/pasta-alfredo.png', accent: B, glow: glow('rgba(47,143,213,.30)'), desc: 'Fettuccine con pollo, camarón o salmón.' },
+      ],
+      pillars: [
+        { num: '01', color: '#e2493b', title: 'ZONA CULICHI', text: 'Raw bar estilo Sinaloa: aguachiles, torres, copas y molcajetes — siempre crudo, frío y con limón.' },
+        { num: '02', color: '#2f8fd5', title: 'FUEGO ABIERTO', text: 'Zarandeados y parrilladas en barco, del asador con salsa secreta y arroz recién salteado.' },
+        { num: '03', color: '#e2493b', title: 'EL PATIO', text: 'La ruta del sabor al aire libre — música en vivo, micheladas preparadas y buckets de cheves.' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

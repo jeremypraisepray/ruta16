@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+body { margin:0; background:#141722; font-family:'Barlow',sans-serif; }
+a { color:inherit; text-decoration:none; }
+a:hover { color:#e2493b; }
+</style>
+</helmet>
+<div style="display:flex; height:6px;"><div style="flex:1; background:#e2493b;"></div><div style="flex:1; background:#2f6fb5;"></div></div>
+<div style="position:sticky; top:0; z-index:40; display:flex; align-items:center; justify-content:space-between; padding:12px 48px; border-bottom:1px solid rgba(255,255,255,.08); background:rgba(20,23,34,.93); backdrop-filter:blur(8px);">
+  <a href="Ruta16 Home.dc.html"><img src="https://ruta16.com/pluto-images/brand-logos/3b541599-75f4-485a-85d0-23b15a895e42.png" alt="Ruta 16" style="height:58px; display:block;"></a>
+  <div style="display:flex; gap:36px; font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:19px; letter-spacing:3px; color:#e8e9ee;">
+    <a href="Ruta16 Menu.dc.html" style="color:#e2493b;">MENÚ</a><a href="Ruta16 Nosotros.dc.html">NOSOTROS</a><a href="Ruta16 Visita.dc.html">VISÍTANOS</a>
+  </div>
+  <a href="https://www.toasttab.com/local/order/mariscos-ruta-16-y-mas-12810-suit-b-gulf-fwy" target="_blank" style="background:#e2493b; color:#fff; font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:19px; letter-spacing:2px; padding:12px 26px;">ORDER ONLINE</a>
+</div>
+<div style="padding:64px 120px 28px; display:flex; flex-direction:column; gap:12px; max-width:1440px; margin:0 auto; box-sizing:border-box;">
+  <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:18px; letter-spacing:8px; color:#e2493b;">MARISCOS · SINALOA STYLE · Y MÁS</div>
+  <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:88px; line-height:.95; color:#fff;">EL MENÚ</div>
+  <div style="font-size:18px; color:rgba(255,255,255,.65); max-width:620px;">Ocho paradas en la ruta del sabor. Elige tu parada — o recorre la ruta completa.</div>
+</div>
+<div style="position:sticky; top:82px; z-index:30; display:flex; align-items:center; gap:8px; padding:16px 48px; background:rgba(14,17,25,.95); backdrop-filter:blur(8px); border-top:1px solid rgba(255,255,255,.08); border-bottom:1px solid rgba(255,255,255,.08); flex-wrap:wrap;">
+  <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="8">
+    <div onClick="{{ t.onClick }}" style="display:flex; align-items:center; gap:9px; padding:8px 16px; cursor:pointer; border:1px solid {{ t.borderColor }}; background:{{ t.bg }};" style-hover="border-color:rgba(255,255,255,.5)">
+      <div style="width:26px; height:26px; border-radius:50%; border:2px dashed {{ t.ring }}; display:flex; align-items:center; justify-content:center; font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:12px; color:#fff;">{{ t.num }}</div>
+      <div style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:16px; letter-spacing:1.5px; color:#fff; white-space:nowrap;">{{ t.name }}</div>
+    </div>
+  </sc-for>
+</div>
+<div style="max-width:1440px; margin:0 auto;">
+<sc-for list="{{ sections }}" as="sec" hint-placeholder-count="1">
+  <div style="padding:72px 120px; display:flex; flex-direction:column; gap:44px; border-bottom:1px solid rgba(255,255,255,.08); position:relative; overflow:hidden;">
+    <div style="position:absolute; right:-30px; top:-70px; font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:340px; line-height:1; color:rgba(255,255,255,.04); pointer-events:none;">{{ sec.num }}</div>
+    <div style="display:grid; grid-template-columns:1fr 360px; gap:40px; align-items:center; position:relative;">
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:17px; letter-spacing:6px; color:{{ sec.accent }};">PARADA {{ sec.num }} · {{ sec.tag }}</div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:60px; line-height:1; color:#fff;">{{ sec.name }}</div>
+        <div style="font-size:17px; font-style:italic; color:rgba(255,255,255,.55); max-width:560px;">{{ sec.desc }}</div>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:center; height:280px; background:{{ sec.glow }};">
+        <img src="{{ sec.img }}" alt="{{ sec.name }}" style="max-width:400px; max-height:300px; filter:drop-shadow(0 30px 34px rgba(0,0,0,.62)); transition:transform .5s cubic-bezier(.2,.8,.2,1);" style-hover="transform:translateY(-10px) scale(1.04)">
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(2, 1fr); gap:56px 72px; position:relative;">
+      <sc-for list="{{ sec.groups }}" as="g" hint-placeholder-count="2">
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <div style="display:flex; align-items:baseline; gap:12px; border-bottom:2px solid {{ g.accent }}; padding-bottom:8px; margin-bottom:10px;">
+            <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:26px; letter-spacing:2px; color:#fff;">{{ g.title }}</div>
+            <div style="font-size:14px; color:rgba(255,255,255,.5);">{{ g.note }}</div>
+          </div>
+          <sc-for list="{{ g.items }}" as="it" hint-placeholder-count="3">
+            <div style="display:flex; flex-direction:column; gap:3px; padding:9px 0;">
+              <div style="display:flex; align-items:baseline; gap:10px;">
+                <div style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:20px; letter-spacing:1px; color:#fff;">{{ it.name }}</div>
+                <div style="flex:1; border-bottom:2px dotted rgba(255,255,255,.25); transform:translateY(-4px); min-width:24px;"></div>
+                <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:20px; color:#e2493b; white-space:nowrap;">{{ it.price }}</div>
+              </div>
+              <div style="font-size:14.5px; line-height:1.45; color:rgba(255,255,255,.55); max-width:520px;">{{ it.desc }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:flex; align-items:center; gap:44px; background:#0e1119; border:1px solid rgba(255,255,255,.12); padding:30px 44px 30px 24px; position:relative;">
+      <div style="width:300px; flex-shrink:0; display:flex; align-items:center; justify-content:center; background:{{ sec.glow }};">
+        <img src="{{ sec.feat.img }}" alt="{{ sec.feat.name }}" style="max-width:330px; max-height:250px; margin:-26px -20px; filter:drop-shadow(0 26px 30px rgba(0,0,0,.6)); transition:transform .5s cubic-bezier(.2,.8,.2,1);" style-hover="transform:translateY(-10px) scale(1.04)">
+      </div>
+      <div style="display:flex; flex-direction:column; gap:9px; flex:1;">
+        <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:13px; letter-spacing:5px; color:{{ sec.accent }};">PLATO DESTACADO</div>
+        <div style="display:flex; align-items:baseline; gap:14px;">
+          <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:34px; letter-spacing:1px; color:#fff;">{{ sec.feat.name }}</div>
+          <div style="flex:1; border-bottom:2px dotted rgba(255,255,255,.25); transform:translateY(-6px); min-width:24px;"></div>
+          <div style="font-family:'Barlow Condensed',sans-serif; font-weight:800; font-size:30px; color:#e2493b;">{{ sec.feat.price }}</div>
+        </div>
+        <div style="font-size:15.5px; line-height:1.5; color:rgba(255,255,255,.6); max-width:620px; text-wrap:pretty;">{{ sec.feat.desc }}</div>
+      </div>
+    </div>
+    <sc-if value="{{ sec.next }}" hint-placeholder-val="{{ true }}">
+      <div onClick="{{ sec.onNext }}" style="align-self:flex-start; display:flex; align-items:center; gap:14px; cursor:pointer; border:1px solid rgba(255,255,255,.2); padding:16px 24px; position:relative;" style-hover="border-color:#e2493b">
+        <div style="font-family:'Barlow Condensed',sans-serif; font-weight:600; font-size:14px; letter-spacing:4px; color:rgba(255,255,255,.5);">ON THE ROAD AHEAD</div>
+        <div style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:18px; letter-spacing:2px; color:#2f8fd5;">{{ sec.next }} →</div>
+      </div>
+    </sc-if>
+  </div>
+</sc-for>
+</div>
+<div style="padding:40px 48px; display:flex; flex-direction:column; gap:10px; align-items:center;">
+  <div style="font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:18px; letter-spacing:3px; color:rgba(255,255,255,.5); text-align:center;">GRACIAS POR VIAJAR LA RUTA DEL SABOR</div>
+  <div style="font-size:13.5px; color:rgba(255,255,255,.35); text-align:center;">15% gratuity added after a $100 purchase · $MP = market price · precios sujetos a cambio</div>
+</div>
+<div style="display:flex; height:6px;"><div style="flex:1; background:#e2493b;"></div><div style="flex:1; background:#2f6fb5;"></div></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { active: 'all' };
+  data() {
+    const R = '#e2493b', B = '#2f8fd5';
+    return [
+      { num: '01', name: 'APPETIZERS', tag: 'PA\' EMPEZAR', accent: R, desc: 'Platos pal centro de la mesa. Pide dos y pasa la salsa.', groups: [
+        { title: 'TRANQUI', note: 'take it easy', accent: R, items: [
+          { name: 'Ostiones en Concha', price: '6 pc $13 · 12 pc $21', desc: 'Fresh oysters in shell.' },
+          { name: 'Ostiones Acevichados', price: '6 pc $17 · 12 pc $26', desc: 'Fresh oysters with fish ceviche, culichi sauce, pico.' },
+          { name: 'Ostiones R16', price: '6 pc $16 · 12 pc $28', desc: 'Grilled oysters — bacon, chorizo, mozzarella, jalapeño, camarada sauce, garlic bread, roasted lemon.' },
+        ]},
+        { title: 'RAPIDÍN', note: 'in a hurry', accent: B, items: [
+          { name: 'Camarón Cajun R16', price: '1 lb $30 · ½ lb $17', desc: 'Boiled shrimp, R16 seasoning, red potato, corn, sausage, crab, garlic sauce.' },
+          { name: 'Camarón Cajun Louisiana', price: '1 lb $24 · ½ lb $14', desc: 'Classic Louisiana-style boil.' },
+          { name: 'Crabfingers', price: '$MP', desc: 'Garlic butter, molcajeteada, devil sauce or grilled.' },
+        ]},
+        { title: 'CÓCTELES', note: 'seafood cocktails', accent: R, items: [
+          { name: 'Levanta Muertos', price: '$23', desc: 'Shrimp, octopus, oysters, fish ceviche in R16 cocktail sauce, avocado, pico.' },
+          { name: 'Cóctel Mixto', price: '$20', desc: 'Shrimp & octopus.' },
+          { name: 'Cóctel de Camarón', price: '$15', desc: '' },
+        ]},
+        { title: 'PA\' LOS COMPAS', note: 'for the homies', accent: B, items: [
+          { name: 'Buddy Shrimp', price: '$17', desc: 'House favorite — 3 stuffed, 3 camarada, 3 breaded shrimp, curtido, fries, camarada sauce.' },
+          { name: 'Trash Can Nachos', price: 'shrimp $16 · beef $16 · chicken $16 · mixto $18', desc: 'Crispy tortilla, charro beans, chile con queso, pico, jalapeño, guac — with your choice of meat.' },
+          { name: 'Camarones Camarada', price: '6 pc $9 · 12 pc $15', desc: 'Tempura shrimp with house salad, camarada sauce.' },
+          { name: 'Chicken Wings', price: '6 pc $12 · 12 pc $17', desc: 'Fried — lemon pepper, Chinese BBQ, buffalo or romano cream.' },
+          { name: 'Chicharrón Mixto', price: '$24', desc: 'Tilapia & octopus.' },
+          { name: 'Chicharrón de Pulpo', price: '$23', desc: '' },
+          { name: 'Chicharrón de Tilapia', price: '$18', desc: '' },
+          { name: 'Seafood Crab Balls', price: '$14', desc: 'Camarada sauce.' },
+          { name: 'Empanadas Marinas', price: '$9', desc: 'Shrimp, crab, veggies.' },
+        ]},
+      ]},
+      { num: '02', name: 'ZONA CULICHI', tag: 'SINALOA STYLE', accent: B, desc: 'Crudo, frío y con limón — como se come en Culiacán.', groups: [
+        { title: 'TOP SELLERS', note: 'los que vuelan de la cocina · add chiltepín +$2', accent: R, items: [
+          { name: 'Torre 16', price: '$29', desc: 'Mixed ceviche, scallops, callo de pescado, boiled shrimp, 6 aguachiles, avocado, cucumber, red onions, dipped in culichi sauce.' },
+          { name: 'Copa 16', price: '$25', desc: 'Glass stuffed with fish ceviche, 12 aguachiles in culichi sauce, 3 jumbo shrimp + scallops on top.' },
+          { name: 'La Chaparra', price: '$29', desc: 'Molcajete bowl — seafood tower, mixed ceviche, scallops, boiled + tanned shrimp, green mussels, avocado, culichi sauce.' },
+          { name: '7 Mares', price: '$25', desc: 'Molcajete — seafood mix, octopus, scallops, callo, boiled + tanned shrimp, avocado, onions.' },
+          { name: 'Piña La Malecona', price: '$22', desc: 'Pineapple stuffed with mixed ceviche — fish, shrimp, octopus, red onion, diced pineapple, sauce of choice.' },
+        ]},
+        { title: 'CEVICHES Y TOSTADAS', note: 'elige tu salsa culichi: negra, verde o roja · add chiltepín +$2', accent: B, items: [
+          { name: 'Tropical', price: 'tostada $8 · ceviche $18', desc: '' },
+          { name: 'Pulpo', price: 'tostada $8 · ceviche $18', desc: '' },
+          { name: 'Camarón', price: 'tostada $6 · ceviche $16', desc: '' },
+          { name: 'Pescado', price: 'tostada $6 · ceviche $15', desc: '' },
+        ]},
+        { title: 'AGUACHILES', note: 'tanned shrimp, culichi sauce, avocado, cucumber, red onion', accent: R, items: [
+          { name: 'Aguachile Negro', price: '6 pc $13 · 12 pc $17 · 16 pc $21', desc: '' },
+          { name: 'Aguachile Mango Habanero', price: '6 pc $15 · 12 pc $19 · 16 pc $23', desc: '' },
+          { name: 'Aguachile Verde', price: '6 pc $13 · 12 pc $17 · 16 pc $21', desc: '' },
+          { name: 'Aguachile Rojo', price: '6 pc $13 · 12 pc $17 · 16 pc $21', desc: '' },
+        ]},
+        { title: 'PARA COMPARTIR', note: 'tray to share · 4–6 compas', accent: B, items: [
+          { name: 'Gran Culichi', price: '$80', desc: '5 oysters, 5 clams with fish ceviche & pico, 6 aguachiles, 12 shrimp, 6 callo de hacha, 5 balazos — choice of culichi sauce.' },
+        ]},
+      ]},
+      { num: '03', name: 'RUTA CALIENTE', tag: 'CALDOS · ARROZ', accent: R, desc: 'Caldito que levanta muertos, arroz recién salteado.', groups: [
+        { title: 'CALDOS', note: 'add devil sauce +$2', accent: R, items: [
+          { name: 'Caldo de Mariscos', price: '$16', desc: 'Crab, clams, squid, veggies — rice, garlic bread.' },
+          { name: 'Caldo de Camarón', price: '$14', desc: '' },
+          { name: 'Caldo de Pescado', price: '$13', desc: '' },
+          { name: 'Lobster & Shrimp Cream Soup', price: '$10', desc: 'Served in a bread ball.' },
+        ]},
+        { title: 'ARROZ', note: 'fried rice', accent: B, items: [
+          { name: 'Arroz Mixto', price: '$13', desc: 'Shrimp & chicken.' },
+          { name: 'Arroz con Camarón', price: '$12', desc: '' },
+          { name: 'Arroz con Pollo', price: '$12', desc: '' },
+        ]},
+      ]},
+      { num: '04', name: 'MARISCOS', tag: 'DEL ASADOR', accent: B, desc: 'Del asador de fuego abierto — los fuertes de la casa.', groups: [
+        { title: 'ZARANDEADOS', note: 'open fire, secret sauce, fried rice, house salad, roasted jalapeño', accent: R, items: [
+          { name: 'Huachinango Zarandeado', price: '$MP', desc: '' },
+          { name: 'Camarones Zarandeados', price: '$20', desc: '' },
+          { name: 'Pulpo Zarandeado', price: '$MP', desc: '' },
+        ]},
+        { title: 'SALMONES', note: '', accent: B, items: [
+          { name: 'Salmón R16', price: '$26', desc: 'Stuffed with cream, spinach & cheese — house rice, vegetables.' },
+          { name: 'Salmón a la Plancha', price: '$20', desc: 'Grilled — mashed potato and vegetables.' },
+          { name: 'Salmón Mexicano', price: '$26', desc: 'Avocado, pico, lime wine sauce — house rice, vegetables.' },
+        ]},
+        { title: 'AL GUSTO', note: 'fried rice, house salad, sautéed potatoes · roasted garlic, devil, molcajeteada or grilled', accent: R, items: [
+          { name: 'Huachinango', price: '$33', desc: '' },
+          { name: 'Mojarra', price: '$18', desc: '' },
+          { name: 'Bass Fish', price: '$18', desc: '' },
+          { name: 'Catfish', price: '$18', desc: '' },
+          { name: 'Camarones', price: '$16', desc: '' },
+        ]},
+        { title: 'EMPANIZADOS', note: 'house fried rice, house salad, sautéed potatoes, camarada sauce', accent: B, items: [
+          { name: 'Camarones Rellenos', price: '$22', desc: '' },
+          { name: 'Camarón y Filete', price: '$18', desc: '' },
+          { name: 'Camarones Empanizados', price: '$16', desc: '' },
+          { name: 'Filete de Pescado', price: '$16', desc: '' },
+        ]},
+      ]},
+      { num: '05', name: 'PARRILLADAS', tag: 'PARA COMPARTIR', accent: R, desc: 'Pa\' la mesa grande — parrilla, brasa y boquete en la mesa.', groups: [
+        { title: 'PARRILLADAS', note: 'serves 2–4 · arroz frito, guacamole, frijoles charros, pico de gallo, tortillas', accent: R, items: [
+          { name: 'Mar y Tierra', price: '$45', desc: 'Whole catfish, octopus zarandeado, shrimp, chicken, fajita beef, 2 cheese quesadillas, cambray onion, grilled cactus & grilled cheese.' },
+          { name: 'Marina', price: 'catfish $37 · red snapper $55', desc: 'Topped with seafood mix, scallops, octopus, shrimp, squid and clams — fried rice, guacamole, house salad.' },
+          { name: 'Zarandeadas', price: '$64', desc: 'Parrillada mix, 6 shrimp, ½ octopus and a whole red snapper marinated in our house secret spices.' },
+          { name: 'Terrestre', price: '$22', desc: 'Fajita, chicken, sausage, grilled cheese, cambray onions and grilled cactus — house rice, charros, tortillas.' },
+        ]},
+        { title: 'ESPECIALIDADES', note: 'de la casa', accent: B, items: [
+          { name: 'Presidentes Agurcia', price: '$55', desc: '6 oz Rib Eye Black Angus and lobster tail — crawfish tomato sauce, mixed vegetables, garlic or crawfish mashed potato.' },
+          { name: 'Rib Eye Enamorado', price: '$45', desc: '10 oz Rib Eye Black Angus and 2 shrimp — crawfish tomato sauce, mixed vegetables, mashed potato.' },
+          { name: 'Pollo Marino', price: '$21', desc: 'Stuffed chicken breast with shrimp, cheese, green bell pepper and lime tomato sauce.' },
+          { name: 'Bisteck a lo Deli Encebollado', price: '$20', desc: 'Grilled steak with caramelized onion, sautéed potatoes, house rice and salad.' },
+        ]},
+        { title: 'MOLCAJETES CALIENTES', note: '', accent: R, items: [
+          { name: 'Molcajete Regio', price: '$29', desc: 'Beef fajita, chicken, sausage, shrimp, grilled cheese, grilled cactus, cambray onions, roasted jalapeño in red molcajeteada sauce.' },
+          { name: 'Molcajete Bañado', price: '$23', desc: 'Stuffed shrimp with cream cheese and jalapeño wrapped in bacon, dipped in molcajeteada red sauce.' },
+        ]},
+      ]},
+      { num: '06', name: 'Y MÁS', tag: 'TACOS · SANDWICHES · PASTAS', accent: B, desc: 'Porque somos mariscos… y más.', groups: [
+        { title: 'TACOS', note: 'with house salad', accent: R, items: [
+          { name: 'Tacos Gobernador', price: '$16', desc: '' },
+          { name: 'Quesabirria', price: '$18', desc: 'Con consomé.' },
+          { name: 'Rib Eye Tacos', price: '$18', desc: '' },
+          { name: 'Bang Bang Fried Shrimp Tacos', price: '$16', desc: '' },
+          { name: 'Tacos Campechanos', price: '$15', desc: '' },
+          { name: 'Fish Tacos', price: '$13', desc: '' },
+        ]},
+        { title: 'SANDWICHES', note: 'with fries or onion rings', accent: B, items: [
+          { name: 'Hamburguesa Pirata', price: '$18', desc: '6 oz beef, 3 mariposa shrimp, american cheese.' },
+          { name: 'Hamburguesa Chilanga', price: '$22', desc: 'Beef, chicken, chorizo, grilled cactus, camarada sauce.' },
+          { name: 'Po-Boys', price: '$15', desc: 'French baguette, chile con queso — shrimp, oyster or fish.' },
+        ]},
+        { title: 'PASTAS', note: 'add chipotle +$2', accent: R, items: [
+          { name: 'Pasta Mardi Gras', price: '$25', desc: 'Fettuccine, chicken, shrimp, sausage, tomato cream.' },
+          { name: 'Don Fredy', price: 'chicken $18 · shrimp $19 · salmon $25', desc: 'Garlic wine butter sauce, spinach and cherry tomatoes — with garlic bread.' },
+          { name: 'Pasta Alfredo', price: 'chicken $14 · shrimp $17 · salmon $22', desc: '' },
+        ]},
+        { title: 'DEL GRILL', note: '', accent: B, items: [
+          { name: 'Brochetas Mixtas', price: '2 pc $23', desc: 'Shrimp, chicken & beef skewers.' },
+          { name: 'Caesar Salad', price: '$17', desc: '' },
+        ]},
+      ]},
+      { num: '07', name: 'MORRITOS & DESSERT', tag: 'KIDS · DULCE · DRINKS', accent: R, desc: 'Pa\' los morritos y el antojo dulce.', groups: [
+        { title: 'MORRITOS', note: 'kids', accent: B, items: [
+          { name: 'Dedos de Queso', price: '$9', desc: '' },
+          { name: 'Pasta Alfredo', price: '$7', desc: '' },
+          { name: 'Cheeseburger', price: '$7', desc: '' },
+          { name: 'Filete Empanizado', price: '$7', desc: '' },
+          { name: 'Chicken Tenders / Nuggets', price: '$7', desc: 'With fries.' },
+        ]},
+        { title: 'DESSERT', note: '', accent: R, items: [
+          { name: 'El Guapo', price: '$14', desc: '' },
+          { name: 'Chocolate Guapo', price: '$14', desc: '' },
+        ]},
+        { title: 'SIN ALCOHOL', note: '', accent: B, items: [
+          { name: 'Piña Colada Virgen', price: '$7', desc: '' },
+          { name: 'Daiquiri', price: '$7', desc: 'Fresa · mango · guava · sandía.' },
+        ]},
+        { title: 'REFRESCOS', note: '', accent: R, items: [
+          { name: 'Aguas Frescas', price: 'sm $3.50 · lg $4.50', desc: 'Limonada, horchata, jamaica, piña pa\' la niña, jugo de naranja — no refill.' },
+          { name: 'Soft Drinks', price: '$3', desc: 'Pepsi, Diet Pepsi, Pepsi Zero, Starry, Brisk Iced Tea, Pink Lemonade, Big Red, Dr Pepper.' },
+          { name: 'Mexican Coke', price: '$4', desc: '' },
+          { name: 'Squirt', price: '$4', desc: '' },
+          { name: 'Topo Chico', price: '$4', desc: '' },
+          { name: 'Red Bull', price: '$4', desc: '' },
+          { name: 'Can Coke · Diet Coke', price: '$3', desc: '' },
+          { name: 'Jarritos', price: '$3', desc: '' },
+          { name: 'Agua Embotellada', price: '$2', desc: '' },
+        ]},
+      ]},
+      { num: '08', name: 'CHEVES', tag: 'ÚLTIMA PARADA', accent: B, desc: 'Última parada: hielo, limón y sal.', groups: [
+        { title: 'DE AQUÍ', note: 'domestic $4.50', accent: R, items: [
+          { name: 'Bud Light · Budweiser · Michelob Ultra', price: '$4.50', desc: '' },
+          { name: 'Coors Light · Miller Lite', price: '$4.50', desc: '' },
+          { name: 'Heineken · Heineken 0.0 · Topochico Seltzer', price: '$4.50', desc: '' },
+        ]},
+        { title: 'DE ALLÁ', note: 'imported $5', accent: B, items: [
+          { name: 'Corona Extra · Familiar · Premier', price: '$5', desc: '' },
+          { name: 'Modelo Especial · Negra Modelo · Pacífico', price: '$5', desc: '' },
+          { name: 'Tecate Light · Roja · Victoria · Indio · Sol', price: '$5', desc: '' },
+          { name: 'Dos Equis · Bohemia · Stella · Estrella Jalisco', price: '$5', desc: '' },
+        ]},
+        { title: 'BUCKETS', note: '6 beers · pide tu barco cervecero', accent: R, items: [
+          { name: 'Bucket Domestic', price: '$28', desc: '' },
+          { name: 'Bucket Imported', price: '$30', desc: '' },
+          { name: 'Bucket Mix', price: '$30', desc: '' },
+        ]},
+        { title: 'DRAFT BEER', note: '', accent: R, items: [
+          { name: 'Small', price: '$4', desc: '' },
+          { name: 'Large', price: '$7', desc: '' },
+        ]},
+        { title: 'EXTRAS', note: '', accent: B, items: [
+          { name: 'Michelada Regular', price: '+$1', desc: '' },
+          { name: 'Michelada Preparada', price: '+$3', desc: '' },
+          { name: 'Chelada', price: '+$1', desc: '' },
+          { name: 'Clamato', price: '+$1', desc: '' },
+        ]},
+      ]},
+    ];
+  }
+  renderVals() {
+    const all = this.data();
+    const active = this.state.active;
+    const ring = i => (i % 2 === 0 ? '#e2493b' : '#2f8fd5');
+    const tabs = [{ num: '★', name: 'LA RUTA COMPLETA', key: 'all', ring: '#e2493b' }]
+      .concat(all.map((s, i) => ({ num: s.num, name: s.name, key: s.num, ring: ring(i) })))
+      .map(t => ({
+        ...t,
+        bg: t.key === active ? 'rgba(226,73,59,.18)' : 'transparent',
+        borderColor: t.key === active ? '#e2493b' : 'rgba(255,255,255,.15)',
+        onClick: () => { this.setState({ active: t.key }); window.scrollTo({ top: 0 }); },
+      }));
+    const art = {
+      '01': { img: 'assets/dishes/ostiones.png', feat: { img: 'assets/dishes/nachos.png', name: 'TRASH CAN NACHOS', price: '$16', desc: 'Charro beans, chile con queso, pico, jalapeño, guac y la carne que elijas — pal centro de la mesa.' } },
+      '02': { img: 'assets/dishes/aguachile.png', feat: { img: 'assets/dishes/tostadas-ceviche.png', name: 'TOSTADAS DE CEVICHE', price: '$8', desc: 'Pescado o camarón curtido en limón, pepino, cebolla morada, aguacate y salsa negra.' } },
+      '03': { img: 'assets/dishes/caldo-mariscos.png', feat: { img: 'assets/dishes/arroz-mixto.png', name: 'ARROZ MIXTO', price: '$13', desc: 'Arroz frito recién salteado con camarón y pollo, verduras y cebollín.' } },
+      '04': { img: 'assets/dishes/salmon.png', feat: { img: 'assets/dishes/empanizados.png', name: 'CAMARÓN Y FILETE', price: '$18', desc: 'Empanizados con arroz frito de la casa, ensalada, papas salteadas y salsa camarada.' } },
+      '05': { img: 'assets/dishes/parrillada-barco.png', feat: { img: 'assets/dishes/mar-y-tierra.png', name: 'MAR Y TIERRA', price: '$45', desc: 'Bagre entero, pulpo zarandeado, camarón, pollo, fajita de res, quesadillas, nopal y queso asado.' } },
+      '06': { img: 'assets/dishes/tacos.png', feat: { img: 'assets/dishes/poboy.png', name: 'PO-BOYS', price: '$15', desc: 'Baguette francés con chile con queso — camarón, ostión o pescado, con papas.' } },
+      '07': { img: 'assets/drinks/pina-colada.png', feat: { img: 'assets/drinks/margarita-fresa.png', name: 'DAIQUIRI', price: '$7', desc: 'Fresa, mango, guayaba o sandía — con escarchado de chamoy y chile.' } },
+      '08': { img: 'assets/drinks/michelada.png', feat: { img: 'assets/drinks/semaforo.png', name: 'SEMÁFORO', price: '$MP', desc: 'Tres capas, un solo vaso — la que se pide cuando el patio ya se puso bueno.' } },
+    };
+    const glowFor = a => 'radial-gradient(circle at 50% 52%, ' + (a === '#e2493b' ? 'rgba(226,73,59,.28)' : 'rgba(47,143,213,.28)') + ' 0%, rgba(20,23,34,0) 66%)';
+    const sections = (active === 'all' ? all : all.filter(s => s.num === active)).map(s => {
+      const idx = all.indexOf(s);
+      const nx = all[idx + 1];
+      return {
+        ...s,
+        ...art[s.num],
+        glow: glowFor(s.accent),
+        next: active !== 'all' && nx ? 'PARADA ' + nx.num + ' · ' + nx.name : null,
+        onNext: nx ? () => { this.setState({ active: nx.num }); window.scrollTo({ top: 0 }); } : null,
+      };
+    });
+    return { tabs, sections };
+  }
+}
+</script>
+</body>
+</html>

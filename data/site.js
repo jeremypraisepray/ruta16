@@ -18,23 +18,67 @@ export const NAV_LINKS = [
   { label: 'VISÍTANOS', href: '/visitanos' },
 ];
 
+export const RED = '#e2493b';
+export const BLUE = '#2f8fd5';
+
+/**
+ * Cut-outs are never framed in a box — they sit on a radial "plato" glow that
+ * fades to the page navy.
+ */
+export const plateGlow = (accent, at = '50% 66%', alpha = '.30') =>
+  `radial-gradient(circle at ${at}, ${
+    accent === RED ? `rgba(226,73,59,${alpha})` : `rgba(47,143,213,${alpha})`
+  } 0%, rgba(20,23,34,0) 66%)`;
+
 export const SPECIALS = [
   {
     variant: 'red',
     title: 'MARTES ¡DESTACADO!',
     text: 'Especial de tacos todos los martes.',
+    textMax: 240,
+    art: {
+      src: '/images/dishes/tacos.webp',
+      alt: 'Tacos',
+      style: { right: '-30px', bottom: '-26px', width: '190px' },
+    },
   },
   {
     variant: 'blue',
     title: 'MIÉRCOLES ¡JALEDAY!',
     text: 'El meridiano de la semana se celebra aquí.',
+    textMax: 260,
+    art: {
+      src: '/images/drinks/semaforo.webp',
+      alt: 'Semáforo',
+      style: { right: '14px', bottom: '-40px', width: '150px' },
+    },
   },
   {
     variant: 'dark',
     title: 'HAPPY HOUR',
     text: 'Cheves, micheladas y buckets — última parada.',
+    textMax: 215,
+    art: {
+      src: '/images/drinks/carajillo.webp',
+      alt: 'Carajillo',
+      style: { right: '18px', bottom: '-26px', width: '128px' },
+    },
   },
 ];
+
+/** Visítanos runs the same strip with a michelada in the happy-hour panel. */
+export const SPECIALS_VISIT = SPECIALS.map((s, i) =>
+  i === 2
+    ? {
+        ...s,
+        art: {
+          src: '/images/drinks/michelada.webp',
+          alt: 'Michelada preparada',
+          style: { right: '6px', bottom: '-30px', width: '152px' },
+        },
+      }
+    : s
+);
 
 export const HOURS = [
   { day: 'DOMINGO', time: '11 AM – 10 PM' },
