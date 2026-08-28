@@ -248,7 +248,7 @@ export default function HomePage() {
         <div className="platos__inner">
           <div className="platos__head">
             <div className="platos__headL">
-              <div className="eyebrow">SIETE PARADAS · UN SOLO VIAJE</div>
+              <div className="eyebrow">OCHO PARADAS · UN SOLO VIAJE</div>
               <h2 className="platos__title">PLATOS DE LA RUTA</h2>
             </div>
             <Link href="/menu" className="platos__link">
@@ -285,7 +285,7 @@ export default function HomePage() {
 
       <section className="barra">
         <div className="barra__head">
-          <div className="eyebrow eyebrow--blue">PARADA 07 · ÚLTIMA PARADA</div>
+          <div className="eyebrow eyebrow--blue">PARADA 08 · ÚLTIMA PARADA</div>
           <h2 className="barra__title">LA BARRA</h2>
           <p className="barra__copy">
             Micheladas preparadas, daiquiris y buckets de cheves — el patio se pone bueno después de

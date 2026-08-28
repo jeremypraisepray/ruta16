@@ -115,7 +115,7 @@ export default function NosotrosPage() {
             torre de mariscos, cada receta viajó la ruta desde Sinaloa hasta Pasadena, Texas.
           </p>
           <p className="story__p">
-            Nuestro menú se recorre como una carretera: siete paradas, del raw bar de la Zona Culichi
+            Nuestro menú se recorre como una carretera: ocho paradas, del raw bar de la Zona Culichi
             al asador de fuego abierto, con la última parada siempre en las cheves.
           </p>
         </div>

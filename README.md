@@ -92,12 +92,13 @@ rendered design references exactly at 1440px. Menú, Nosotros and Visítanos mat
 of 0px difference, and every cut-out renders at the reference's size (two portrait drinks differ by
 1px from rounding in the WebP resize).
 
-Three bits of copy in the v2 references still describe the 7-parada menu, and are kept verbatim
-because the handoff calls copy final — worth a decision before launch:
+Three bits of copy in the v2 references still described the 7-parada menu. They were corrected at
+the client's request, so these three strings intentionally differ from the design reference:
 
-- Home, above *Platos de la Ruta*: eyebrow reads "SIETE PARADAS · UN SOLO VIAJE" (there are now 8).
-- Home, above *La Barra*: eyebrow reads "PARADA 07 · ÚLTIMA PARADA", but Cheves is parada 08.
-- Nosotros, second story paragraph: "siete paradas".
+- Home, above *Platos de la Ruta*: "SIETE PARADAS · UN SOLO VIAJE" → "OCHO PARADAS · UN SOLO VIAJE".
+- Home, above *La Barra*: "PARADA 07 · ÚLTIMA PARADA" → "PARADA 08 · ÚLTIMA PARADA" (Cheves, whose
+  section tag in the menu data is likewise "ÚLTIMA PARADA").
+- Nosotros, second story paragraph: "siete paradas" → "ocho paradas".
 
 ## Responsive
 
