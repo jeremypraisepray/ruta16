@@ -107,6 +107,16 @@ nav collapses to a hamburger drawer, hero headline drops to 56px (44px under 640
 scrolls horizontally, top sellers go 2-col (1-col under 640px), specials stack, 2-col layouts stack,
 menu groups go 1-col, postales go 2-col. No horizontal overflow at 320–1440px.
 
+Two further rules earn their place on phones:
+
+- **Menu rows wrap.** In one narrow column a long name plus a multi-price string ("6 pc $13 · 12 pc
+  $17 · 16 pc $21") made the row wider than its section, and `overflow: hidden` (there for the ghost
+  numerals) cut the price off. Below 1100px the row wraps: the price drops to its own line,
+  right-aligned, and keeps the leader dots.
+- **Hero cut-outs stay.** Rather than hiding them, the three hero cut-outs move above the copy —
+  into what is otherwise dead video space — capped in size so they never reach the headline. The
+  eyebrows drop to 15px/3px tracking there so the 8px desktop tracking does not orphan a word.
+
 ## External links
 
 All open in a new tab with `rel="noopener noreferrer"`: Order Online → Toast, address → Google Maps,
