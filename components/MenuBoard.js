@@ -21,7 +21,7 @@ const ART = {
     },
   },
   '02': {
-    img: '/images/dishes/aguachile.webp',
+    img: '/images/dishes/aguachile-negro.webp',
     feat: {
       img: '/images/dishes/tostadas-ceviche.webp',
       name: 'TOSTADAS DE CEVICHE',
@@ -48,9 +48,9 @@ const ART = {
     },
   },
   '05': {
-    img: '/images/dishes/parrillada-barco.webp',
+    img: '/images/dishes/parrillada-terrestre.webp',
     feat: {
-      img: '/images/dishes/mar-y-tierra.webp',
+      img: '/images/dishes/parrillada-marina.webp',
       name: 'MAR Y TIERRA',
       price: '$45',
       desc: 'Bagre entero, pulpo zarandeado, camarón, pollo, fajita de res, quesadillas, nopal y queso asado.',
@@ -66,7 +66,7 @@ const ART = {
     },
   },
   '07': {
-    img: '/images/drinks/pina-colada.webp',
+    img: '/images/dishes/el-guapo.webp',
     feat: {
       img: '/images/drinks/margarita-fresa.webp',
       name: 'DAIQUIRI',
@@ -75,7 +75,7 @@ const ART = {
     },
   },
   '08': {
-    img: '/images/drinks/michelada.webp',
+    img: '/images/drinks/bucket-corona.webp',
     feat: {
       img: '/images/drinks/semaforo.webp',
       name: 'SEMÁFORO',

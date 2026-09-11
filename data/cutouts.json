@@ -3,7 +3,19 @@
     820,
     615
   ],
+  "dishes/aguachile-negro": [
+    820,
+    615
+  ],
   "dishes/arroz-mixto": [
+    820,
+    615
+  ],
+  "dishes/brochetas": [
+    820,
+    615
+  ],
+  "dishes/caesar-salad": [
     820,
     615
   ],
@@ -15,11 +27,31 @@
     820,
     615
   ],
+  "dishes/chaparra": [
+    820,
+    615
+  ],
   "dishes/coctel-ceviche": [
     900,
     675
   ],
+  "dishes/el-guapo": [
+    820,
+    615
+  ],
   "dishes/empanizados": [
+    820,
+    615
+  ],
+  "dishes/filete-gratinado": [
+    820,
+    547
+  ],
+  "dishes/gran-culichi": [
+    820,
+    615
+  ],
+  "dishes/hamburguesa": [
     820,
     615
   ],
@@ -35,6 +67,10 @@
     615,
     820
   ],
+  "dishes/molcajete-regio": [
+    820,
+    615
+  ],
   "dishes/nachos": [
     820,
     615
@@ -47,7 +83,19 @@
     1300,
     867
   ],
+  "dishes/parrillada-marina": [
+    820,
+    615
+  ],
+  "dishes/parrillada-terrestre": [
+    820,
+    615
+  ],
   "dishes/pasta-alfredo": [
+    820,
+    615
+  ],
+  "dishes/pina-malecona": [
     820,
     615
   ],
@@ -59,6 +107,10 @@
     820,
     615
   ],
+  "dishes/salmon-r16": [
+    820,
+    615
+  ],
   "dishes/tacos": [
     820,
     615
@@ -67,7 +119,27 @@
     820,
     615
   ],
+  "drinks/barco-shots": [
+    656,
+    820
+  ],
   "drinks/blue-lagoon": [
+    656,
+    820
+  ],
+  "drinks/bucket-corona": [
+    656,
+    820
+  ],
+  "drinks/bucket-tecate": [
+    656,
+    820
+  ],
+  "drinks/bucket-ultra": [
+    656,
+    820
+  ],
+  "drinks/bucket-victoria": [
     656,
     820
   ],
@@ -84,6 +156,10 @@
     820
   ],
   "drinks/michelada": [
+    656,
+    820
+  ],
+  "drinks/michelada-botella": [
     656,
     820
   ],
