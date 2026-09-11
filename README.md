@@ -65,8 +65,10 @@ All assets are self-hosted under `public/`.
   (VP9/WebM variants were encoded and discarded — both came out larger than the H.264 files.)
 - **Dish & drink cut-outs** — the transparent PNGs from the `assets-v2` and `assets-v3` releases,
   resized to the largest box the design renders them in (×2 for retina) and converted to alpha WebP:
-  49.9 MB → 3.0 MB for the first 26, 39.4 MB → 2.2 MB for the 19 that followed. 45 in the library;
-  the ones not currently placed are staged for slots that need new copy first. `components/Cutout.js` renders them; `data/cutouts.json` carries each file's
+  49.9 MB → 3.0 MB for the first 26, 39.4 MB → 2.2 MB for the 19 that followed. 45 in the library, 35 placed. Five v2 images were superseded by better v3 shots and kept rather
+  than deleted (`aguachile`, `mar-y-tierra`, `salmon`, `tostadas-ceviche`, `pasta-alfredo`); five v3
+  images have no slot that fits them yet (`brochetas`, `caesar-salad`, `pina-malecona`,
+  `bucket-tecate`, `bucket-victoria`). `components/Cutout.js` renders them; `data/cutouts.json` carries each file's
   intrinsic size so lazy loading reserves the right box, and the component releases whichever axis
   the CSS does not constrain so the aspect ratio is never squashed.
 - **Logo** — `public/brand/ruta16-logo.png`, the official artwork extracted from the client's

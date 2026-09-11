@@ -59,9 +59,9 @@ export const SPECIALS = [
     text: 'Cheves, micheladas y buckets — última parada.',
     textMax: 215,
     art: {
-      src: '/images/drinks/carajillo.webp',
-      alt: 'Carajillo',
-      style: { right: '18px', bottom: '-26px', width: '128px' },
+      src: '/images/drinks/bucket-ultra.webp',
+      alt: 'Bucket de cheves',
+      style: { right: '10px', bottom: '-30px', width: '150px' },
     },
   },
 ];

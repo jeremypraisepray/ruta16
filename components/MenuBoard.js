@@ -21,12 +21,12 @@ const ART = {
     },
   },
   '02': {
-    img: '/images/dishes/aguachile-negro.webp',
+    img: '/images/dishes/chaparra.webp',
     feat: {
-      img: '/images/dishes/tostadas-ceviche.webp',
-      name: 'TOSTADAS DE CEVICHE',
-      price: '$8',
-      desc: 'Pescado o camarón curtido en limón, pepino, cebolla morada, aguacate y salsa negra.',
+      img: '/images/dishes/gran-culichi.webp',
+      name: 'GRAN CULICHI',
+      price: '$80',
+      desc: '5 ostiones, 5 almejas con ceviche de pescado y pico, 6 aguachiles, 12 camarones, 6 callos de hacha y 5 balazos — con tu salsa culichi.',
     },
   },
   '03': {
@@ -39,12 +39,12 @@ const ART = {
     },
   },
   '04': {
-    img: '/images/dishes/salmon.webp',
+    img: '/images/dishes/parrillada-plato.webp',
     feat: {
-      img: '/images/dishes/empanizados.webp',
-      name: 'CAMARÓN Y FILETE',
-      price: '$18',
-      desc: 'Empanizados con arroz frito de la casa, ensalada, papas salteadas y salsa camarada.',
+      img: '/images/dishes/salmon-r16.webp',
+      name: 'SALMÓN R16',
+      price: '$26',
+      desc: 'Relleno de crema, espinaca y queso — con arroz de la casa y vegetales.',
     },
   },
   '05': {
@@ -57,7 +57,7 @@ const ART = {
     },
   },
   '06': {
-    img: '/images/dishes/tacos.webp',
+    img: '/images/dishes/hamburguesa.webp',
     feat: {
       img: '/images/dishes/poboy.webp',
       name: 'PO-BOYS',
@@ -66,12 +66,12 @@ const ART = {
     },
   },
   '07': {
-    img: '/images/dishes/el-guapo.webp',
+    img: '/images/drinks/barco-shots.webp',
     feat: {
-      img: '/images/drinks/margarita-fresa.webp',
-      name: 'DAIQUIRI',
-      price: '$7',
-      desc: 'Fresa, mango, guayaba o sandía — con escarchado de chamoy y chile.',
+      img: '/images/dishes/el-guapo.webp',
+      name: 'EL GUAPO',
+      price: '$14',
+      desc: 'Helado frito con caramelo, crema batida y cereza — para cerrar la ruta.',
     },
   },
   '08': {

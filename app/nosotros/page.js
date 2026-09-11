@@ -50,10 +50,10 @@ const COCINA = [
     desc: 'Filete y camarón empanizado con arroz frito.',
   },
   {
-    name: 'PASTA ALFREDO',
-    img: '/images/dishes/pasta-alfredo.webp',
+    name: 'MOLCAJETE REGIO',
+    img: '/images/dishes/molcajete-regio.webp',
     accent: BLUE,
-    desc: 'Fettuccine con pollo, camarón o salmón.',
+    desc: 'Fajita, pollo, chorizo, camarón y queso asado en salsa molcajeteada.',
   },
 ];
 

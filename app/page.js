@@ -109,7 +109,8 @@ const PLATOS = [
 ];
 
 const BARRA = [
-  { name: 'MICHELADA', img: '/images/drinks/michelada.webp' },
+  { name: 'MICHELADA', img: '/images/drinks/michelada-botella.webp' },
+  { name: 'BARCO DE SHOTS', img: '/images/drinks/barco-shots.webp' },
   { name: 'MARGARITA DE FRESA', img: '/images/drinks/margarita-fresa.webp' },
   { name: 'PIÑA COLADA', img: '/images/drinks/pina-colada.webp' },
   { name: 'SEMÁFORO', img: '/images/drinks/semaforo.webp' },
