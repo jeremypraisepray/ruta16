@@ -28,6 +28,13 @@ export default function MenuPage() {
         <div className="menuNote__fine">
           15% gratuity added after a $100 purchase · $MP = market price · precios sujetos a cambio
         </div>
+        <div className="menuNote__advisory">
+          <p>Please tell your server about any food allergies before you order.</p>
+          <p>
+            Consuming raw or undercooked oysters, seafood or meat may increase your risk of
+            foodborne illness — especially for pregnant women and anyone with a medical condition.
+          </p>
+        </div>
       </div>
 
       <div className="barSplit" aria-hidden="true">

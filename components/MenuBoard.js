@@ -25,7 +25,7 @@ const ART = {
     feat: {
       img: '/images/dishes/gran-culichi.webp',
       name: 'GRAN CULICHI',
-      price: '$80',
+      price: '$60',
       desc: '5 ostiones, 5 almejas con ceviche de pescado y pico, 6 aguachiles, 12 camarones, 6 callos de hacha y 5 balazos — con tu salsa culichi.',
     },
   },

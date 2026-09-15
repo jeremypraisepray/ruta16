@@ -40,7 +40,7 @@
           },
           {
             "name": "Camarón Cajun Louisiana",
-            "price": "1 lb $24 · ½ lb $14",
+            "price": "1 lb $26 · ½ lb $16",
             "desc": "Classic Louisiana-style boil."
           },
           {
@@ -67,7 +67,7 @@
           },
           {
             "name": "Cóctel de Camarón",
-            "price": "$15",
+            "price": "$16",
             "desc": ""
           }
         ]
@@ -79,7 +79,7 @@
         "items": [
           {
             "name": "Buddy Shrimp",
-            "price": "$17",
+            "price": "$18",
             "desc": "House favorite — 3 stuffed, 3 camarada, 3 breaded shrimp, curtido, fries, camarada sauce."
           },
           {
@@ -89,7 +89,7 @@
           },
           {
             "name": "Camarones Camarada",
-            "price": "6 pc $9 · 12 pc $15",
+            "price": "6 pc $10 · 12 pc $16",
             "desc": "Tempura shrimp with house salad, camarada sauce."
           },
           {
@@ -140,7 +140,7 @@
         "items": [
           {
             "name": "Torre 16",
-            "price": "$29",
+            "price": "$30",
             "desc": "Mixed ceviche, scallops, callo de pescado, boiled shrimp, 6 aguachiles, avocado, cucumber, red onions, dipped in culichi sauce."
           },
           {
@@ -150,12 +150,12 @@
           },
           {
             "name": "La Chaparra",
-            "price": "$29",
+            "price": "$30",
             "desc": "Molcajete bowl — seafood tower, mixed ceviche, scallops, boiled + tanned shrimp, green mussels, avocado, culichi sauce."
           },
           {
             "name": "7 Mares",
-            "price": "$25",
+            "price": "$26",
             "desc": "Molcajete — seafood mix, octopus, scallops, callo, boiled + tanned shrimp, avocado, onions."
           },
           {
@@ -199,22 +199,22 @@
         "items": [
           {
             "name": "Aguachile Negro",
-            "price": "6 pc $13 · 12 pc $17 · 16 pc $21",
+            "price": "6 pc $13 · 12 pc $18 · 16 pc $23",
             "desc": ""
           },
           {
             "name": "Aguachile Mango Habanero",
-            "price": "6 pc $15 · 12 pc $19 · 16 pc $23",
+            "price": "6 pc $15 · 12 pc $20 · 16 pc $25",
             "desc": ""
           },
           {
             "name": "Aguachile Verde",
-            "price": "6 pc $13 · 12 pc $17 · 16 pc $21",
+            "price": "6 pc $13 · 12 pc $18 · 16 pc $23",
             "desc": ""
           },
           {
             "name": "Aguachile Rojo",
-            "price": "6 pc $13 · 12 pc $17 · 16 pc $21",
+            "price": "6 pc $13 · 12 pc $20 · 16 pc $23",
             "desc": ""
           }
         ]
@@ -226,7 +226,7 @@
         "items": [
           {
             "name": "Gran Culichi",
-            "price": "$80",
+            "price": "$60",
             "desc": "5 oysters, 5 clams with fish ceviche & pico, 6 aguachiles, 12 shrimp, 6 callo de hacha, 5 balazos — choice of culichi sauce."
           }
         ]
@@ -247,17 +247,17 @@
         "items": [
           {
             "name": "Caldo de Mariscos",
-            "price": "$16",
+            "price": "$18",
             "desc": "Crab, clams, squid, veggies — rice, garlic bread."
           },
           {
             "name": "Caldo de Camarón",
-            "price": "$14",
+            "price": "$16",
             "desc": ""
           },
           {
             "name": "Caldo de Pescado",
-            "price": "$13",
+            "price": "$14",
             "desc": ""
           },
           {
@@ -274,17 +274,17 @@
         "items": [
           {
             "name": "Arroz Mixto",
-            "price": "$13",
+            "price": "$15",
             "desc": "Shrimp & chicken."
           },
           {
             "name": "Arroz con Camarón",
-            "price": "$12",
+            "price": "$14",
             "desc": ""
           },
           {
             "name": "Arroz con Pollo",
-            "price": "$12",
+            "price": "$13",
             "desc": ""
           }
         ]
@@ -349,7 +349,7 @@
         "items": [
           {
             "name": "Huachinango",
-            "price": "$33",
+            "price": "$MP",
             "desc": ""
           },
           {
@@ -422,7 +422,7 @@
           },
           {
             "name": "Marina",
-            "price": "catfish $37 · red snapper $55",
+            "price": "catfish $39 · red snapper $59",
             "desc": "Topped with seafood mix, scallops, octopus, shrimp, squid and clams — fried rice, guacamole, house salad."
           },
           {
@@ -604,27 +604,27 @@
         "items": [
           {
             "name": "Dedos de Queso",
-            "price": "$9",
+            "price": "$10",
             "desc": ""
           },
           {
             "name": "Pasta Alfredo",
-            "price": "$7",
+            "price": "$10",
             "desc": ""
           },
           {
             "name": "Cheeseburger",
-            "price": "$7",
+            "price": "$9",
             "desc": ""
           },
           {
             "name": "Filete Empanizado",
-            "price": "$7",
+            "price": "$8",
             "desc": ""
           },
           {
             "name": "Chicken Tenders / Nuggets",
-            "price": "$7",
+            "price": "$8",
             "desc": "With fries."
           }
         ]
@@ -653,12 +653,12 @@
         "items": [
           {
             "name": "Piña Colada Virgen",
-            "price": "$7",
+            "price": "$9",
             "desc": ""
           },
           {
             "name": "Daiquiri",
-            "price": "$7",
+            "price": "$9",
             "desc": "Fresa · mango · guava · sandía."
           }
         ]
@@ -690,7 +690,7 @@
           },
           {
             "name": "Topo Chico",
-            "price": "$4",
+            "price": "$3.50",
             "desc": ""
           },
           {
@@ -726,49 +726,49 @@
     "groups": [
       {
         "title": "DE AQUÍ",
-        "note": "domestic $4.50",
+        "note": "domestic $4.99",
         "accent": "#e2493b",
         "items": [
           {
             "name": "Bud Light · Budweiser · Michelob Ultra",
-            "price": "$4.50",
+            "price": "$4.99",
             "desc": ""
           },
           {
             "name": "Coors Light · Miller Lite",
-            "price": "$4.50",
+            "price": "$4.99",
             "desc": ""
           },
           {
             "name": "Heineken · Heineken 0.0 · Topochico Seltzer",
-            "price": "$4.50",
+            "price": "$4.99",
             "desc": ""
           }
         ]
       },
       {
         "title": "DE ALLÁ",
-        "note": "imported $5",
+        "note": "imported $5.50",
         "accent": "#2f8fd5",
         "items": [
           {
             "name": "Corona Extra · Familiar · Premier",
-            "price": "$5",
+            "price": "$5.50",
             "desc": ""
           },
           {
             "name": "Modelo Especial · Negra Modelo · Pacífico",
-            "price": "$5",
+            "price": "$5.50",
             "desc": ""
           },
           {
             "name": "Tecate Light · Roja · Victoria · Indio · Sol",
-            "price": "$5",
+            "price": "$5.50",
             "desc": ""
           },
           {
             "name": "Dos Equis · Bohemia · Stella · Estrella Jalisco",
-            "price": "$5",
+            "price": "$5.50",
             "desc": ""
           }
         ]
@@ -818,13 +818,13 @@
         "accent": "#2f8fd5",
         "items": [
           {
-            "name": "Michelada Regular",
-            "price": "+$1",
+            "name": "Rutachelada Regular",
+            "price": "$3",
             "desc": ""
           },
           {
-            "name": "Michelada Preparada",
-            "price": "+$3",
+            "name": "Rutachelada Preparada",
+            "price": "$8",
             "desc": ""
           },
           {

@@ -28,7 +28,8 @@ npm run build    # static export → out/
 ## Menu data
 
 `data/menu.json` is the content source of truth: 8 paradas, 29 groups, 112 items with prices and
-descriptions, matching printed menu v2 (Topo Chico is $4 per the owner, not the $3 the PDF prints).
+descriptions. Prices follow the owner's final pricing pass (September 2026), which supersedes both
+the printed menu and the earlier $4 Topo Chico correction.
 It was extracted programmatically from the logic class of `Ruta16 Menu.dc.html` so nothing was lost
 in transcription. `components/MenuBoard.js` renders it and owns the single piece of state on the
 site — `active: 'all' | '01'…'08'`. Changing the filter calls
